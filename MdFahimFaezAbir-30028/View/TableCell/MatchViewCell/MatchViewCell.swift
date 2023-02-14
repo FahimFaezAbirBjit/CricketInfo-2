@@ -6,11 +6,12 @@
 //
 
 import UIKit
-
+import SDWebImage
 class MatchViewCell: UITableViewCell {
 
     @IBOutlet weak var matchViewCell: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    var matchData = [HomeModelData]()
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.delegate = self

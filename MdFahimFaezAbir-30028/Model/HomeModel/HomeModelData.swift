@@ -6,20 +6,26 @@
 //
 
 import Foundation
-enum Types{
+enum MatchTypes{
     case live
     case recent
     case upcoming
 }
 struct HomeModelData{
-    var fix_Id: Int
-    var starting_At: String
+    var fixId: Int
+    var startingAt: String
     var localTeamName: String
     var visitorTeamName: String
+    var visitorTeamScore: String
+    var localTeamScore: String
     var venueName: String
+    var stageName: String
+    var round: String
+    var visitorTeamFlag: String
+    var localTeamFlag: String
     var status: String
-    var stage_Name: String
-    var matchType: Types?
+    var result: String
+    var matchType: MatchTypes
 }
 
 extension HomeModelData{
