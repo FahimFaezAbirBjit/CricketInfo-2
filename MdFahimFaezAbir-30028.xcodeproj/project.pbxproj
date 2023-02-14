@@ -22,6 +22,8 @@
 		8975B0372994FF8600B3E755 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8975B0352994FF8600B3E755 /* LaunchScreen.storyboard */; };
 		897A02B52995FCAF0008557E /* ViewController+UiCustomizitaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897A02B42995FCAF0008557E /* ViewController+UiCustomizitaion.swift */; };
 		89A544B42996516D00E950CB /* NetworkErrorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A544B32996516D00E950CB /* NetworkErrorVC.swift */; };
+		89DA0FC2299B5A910088DE65 /* HomeVCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA0FC1299B5A910088DE65 /* HomeVCModel.swift */; };
+		89DA0FCB299B75480088DE65 /* HomeVc+Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA0FCA299B75480088DE65 /* HomeVc+Binding.swift */; };
 		89DB9E71299502AD00E0AD09 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DB9E70299502AD00E0AD09 /* CustomTabBar.swift */; };
 		89DB9E7B29951BF900E0AD09 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DB9E7A29951BF900E0AD09 /* Constants.swift */; };
 		89DB9E7D29951C1800E0AD09 /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DB9E7C29951C1800E0AD09 /* ObservableObject.swift */; };
@@ -56,6 +58,8 @@
 		8975B0382994FF8600B3E755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		897A02B42995FCAF0008557E /* ViewController+UiCustomizitaion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UiCustomizitaion.swift"; sourceTree = "<group>"; };
 		89A544B32996516D00E950CB /* NetworkErrorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorVC.swift; sourceTree = "<group>"; };
+		89DA0FC1299B5A910088DE65 /* HomeVCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCModel.swift; sourceTree = "<group>"; };
+		89DA0FCA299B75480088DE65 /* HomeVc+Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVc+Binding.swift"; sourceTree = "<group>"; };
 		89DB9E70299502AD00E0AD09 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		89DB9E7A29951BF900E0AD09 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		89DB9E7C29951C1800E0AD09 /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
@@ -119,9 +123,95 @@
 			path = "MdFahimFaezAbir-30028";
 			sourceTree = "<group>";
 		};
+		89DA0FBC299B54130088DE65 /* HomeModel */ = {
+			isa = PBXGroup;
+			children = (
+				892E7040299A45EB00380F5E /* HomeModel.swift */,
+				892E7042299A475D00380F5E /* HomeModelData.swift */,
+			);
+			path = HomeModel;
+			sourceTree = "<group>";
+		};
+		89DA0FBD299B54620088DE65 /* MatchInfoViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				89E50E332999DC6800FDD1CD /* MatchInfoViewCell.swift */,
+				89E50E342999DC6800FDD1CD /* MatchInfoViewCell.xib */,
+			);
+			path = MatchInfoViewCell;
+			sourceTree = "<group>";
+		};
+		89DA0FBE299B549A0088DE65 /* MatchViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				89DA0FC9299B5ED40088DE65 /* Extension */,
+				89E50E302999DBB600FDD1CD /* MatchViewCell.swift */,
+			);
+			path = MatchViewCell;
+			sourceTree = "<group>";
+		};
+		89DA0FBF299B54AB0088DE65 /* NewsViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NewsViewCell;
+			sourceTree = "<group>";
+		};
+		89DA0FC4299B5D880088DE65 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				89DA0FC8299B5EA40088DE65 /* Extension */,
+				89581C7929974FCE00E43ADB /* HomeVC.swift */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		89DA0FC5299B5DAB0088DE65 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				89DA0FC7299B5E840088DE65 /* Extension */,
+				8975B02B2994FF8500B3E755 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		89DA0FC6299B5DD40088DE65 /* NetworkErrorVC */ = {
+			isa = PBXGroup;
+			children = (
+				89A544B32996516D00E950CB /* NetworkErrorVC.swift */,
+			);
+			path = NetworkErrorVC;
+			sourceTree = "<group>";
+		};
+		89DA0FC7299B5E840088DE65 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				897A02B42995FCAF0008557E /* ViewController+UiCustomizitaion.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		89DA0FC8299B5EA40088DE65 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				89581C7D29977D4600E43ADB /* HomeVC+TableView.swift */,
+				89DA0FCA299B75480088DE65 /* HomeVc+Binding.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		89DA0FC9299B5ED40088DE65 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				89E50E372999DDBF00FDD1CD /* MatchViewCell+CollectionView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		89DB9E7229951A7F00E0AD09 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				89DA0FC6299B5DD40088DE65 /* NetworkErrorVC */,
 				89DB9E70299502AD00E0AD09 /* CustomTabBar.swift */,
 				89DB9E7A29951BF900E0AD09 /* Constants.swift */,
 				89DB9E7C29951C1800E0AD09 /* ObservableObject.swift */,
@@ -149,8 +239,7 @@
 		89DB9E7529951AB300E0AD09 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				892E7040299A45EB00380F5E /* HomeModel.swift */,
-				892E7042299A475D00380F5E /* HomeModelData.swift */,
+				89DA0FBC299B54130088DE65 /* HomeModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -158,6 +247,7 @@
 		89DB9E7629951ABC00E0AD09 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				89DA0FC1299B5A910088DE65 /* HomeVCModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -165,12 +255,10 @@
 		89DB9E7729951AC900E0AD09 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				89DA0FC5299B5DAB0088DE65 /* ViewController */,
+				89DA0FC4299B5D880088DE65 /* HomeVC */,
 				89E50E322999DC0800FDD1CD /* CollectionViewCell */,
 				89DB9E8129951DB000E0AD09 /* TableCell */,
-				89DB9E8029951D9F00E0AD09 /* Extension */,
-				8975B02B2994FF8500B3E755 /* ViewController.swift */,
-				89A544B32996516D00E950CB /* NetworkErrorVC.swift */,
-				89581C7929974FCE00E43ADB /* HomeVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,20 +283,11 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		89DB9E8029951D9F00E0AD09 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				897A02B42995FCAF0008557E /* ViewController+UiCustomizitaion.swift */,
-				89581C7D29977D4600E43ADB /* HomeVC+TableView.swift */,
-				89E50E372999DDBF00FDD1CD /* MatchViewCell+CollectionView.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		89DB9E8129951DB000E0AD09 /* TableCell */ = {
 			isa = PBXGroup;
 			children = (
-				89E50E302999DBB600FDD1CD /* MatchViewCell.swift */,
+				89DA0FBF299B54AB0088DE65 /* NewsViewCell */,
+				89DA0FBE299B549A0088DE65 /* MatchViewCell */,
 			);
 			path = TableCell;
 			sourceTree = "<group>";
@@ -216,8 +295,7 @@
 		89E50E322999DC0800FDD1CD /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				89E50E332999DC6800FDD1CD /* MatchInfoViewCell.swift */,
-				89E50E342999DC6800FDD1CD /* MatchInfoViewCell.xib */,
+				89DA0FBD299B54620088DE65 /* MatchInfoViewCell */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -369,6 +447,8 @@
 				89A544B42996516D00E950CB /* NetworkErrorVC.swift in Sources */,
 				8975B02A2994FF8500B3E755 /* SceneDelegate.swift in Sources */,
 				892E703F299A2A5F00380F5E /* ApiResponse.swift in Sources */,
+				89DA0FCB299B75480088DE65 /* HomeVc+Binding.swift in Sources */,
+				89DA0FC2299B5A910088DE65 /* HomeVCModel.swift in Sources */,
 				89581C8029979F0000E43ADB /* TransparentTabBar.swift in Sources */,
 				892E7041299A45EB00380F5E /* HomeModel.swift in Sources */,
 				897A02B52995FCAF0008557E /* ViewController+UiCustomizitaion.swift in Sources */,

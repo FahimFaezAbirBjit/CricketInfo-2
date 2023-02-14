@@ -11,6 +11,7 @@ class ApiResponse {
     private init() {}
     func getApiData<T: Codable>(url: String, completion: @escaping (Result<T?, Error>) -> Void) {
         guard let url = URL(string: url) else { return }
+        print(url)
         URLSession.shared.dataTask(with: url) { data, _, error in
             if let error = error {
                 print("Server Not found \(error.localizedDescription)")
@@ -22,7 +23,7 @@ class ApiResponse {
                     let result = try JSONDecoder().decode(
                         T.self, from: data
                     )
-                    dump(result)
+                   // print(.success(result))
                     completion(.success(result))
                 } catch {
                     completion(.failure(error))

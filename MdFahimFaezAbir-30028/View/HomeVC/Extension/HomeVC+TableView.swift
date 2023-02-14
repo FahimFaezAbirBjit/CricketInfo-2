@@ -39,7 +39,9 @@ extension HomeVC: UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0{
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.matchCell, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.matchCell, for: indexPath) as! MatchViewCell
+            cell.matchData = vcModel.matches.value ?? []
+            cell.collectionView.reloadData()
             return cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.newsCell, for: indexPath)
