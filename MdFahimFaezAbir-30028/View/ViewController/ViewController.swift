@@ -22,22 +22,12 @@ class ViewController: UIViewController {
     let selectedTextAttributes: [NSAttributedString.Key: Any] = [
         NSAttributedString.Key.foregroundColor: UIColor.black
     ]
+    var swipeGestureHelper: SwipeGestureHelper?
     var gestureRecognizers: UIGestureRecognizer!
     var tabBar = TransparentTabBar()
     override func viewDidLoad() {
         super.viewDidLoad()
         uiCustomization()
-    }
-    
-    //MARK: - Action
-    @IBAction func changeViews(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {
-            changeView(selected: sender.selectedSegmentIndex)
-           // segmentController.setTitleTextAttributes(selectedTextAttributes, for: .selected)
-        } else {
-            changeView(selected: sender.selectedSegmentIndex)
-            //segmentController.setTitleTextAttributes(normalTextAttributes, for: .normal)
-        }
     }
     
 }

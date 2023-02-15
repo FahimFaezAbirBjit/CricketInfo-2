@@ -12,6 +12,7 @@ extension HomeVC{
     func setUpBindersForMatchData(){
         vcModel.matches.bind(listener:{ [weak self] _ in
             guard let self = self else {return}
+           // self.modelList = res ?? []
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }

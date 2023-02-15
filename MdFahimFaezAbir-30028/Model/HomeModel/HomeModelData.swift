@@ -25,9 +25,12 @@ struct HomeModelData{
     var localTeamFlag: String
     var status: String
     var result: String
+    var visitorTeamCode: String
+    var localTeamCode: String
     var matchType: MatchTypes
 }
 
 extension HomeModelData{
     static var homeModelData = [HomeModelData]()
 }
+

@@ -10,4 +10,6 @@ struct Constants{
     static let matchCell = "matchCell"
     static let newsCell = "newsCell"
     static let matchInfoCell = "matchInfoCell"
+    static let upcomingCell = "upcomingCell"
+    static let recentVewCell = "recentVewCell"
 }
