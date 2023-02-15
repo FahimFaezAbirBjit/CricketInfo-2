@@ -31,39 +31,42 @@ extension ViewController{
         segmentController.setTitleTextAttributes(normalTextAttributes, for: .normal)
     }
     func gestureConttroller(){
-        segmentController.addTarget(self, action: #selector(segmentedControlValueChanged), for: .valueChanged)
-            let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
-            swipeLeft.direction = .left
-            view.addGestureRecognizer(swipeLeft)
-            let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
-            swipeRight.direction = .right
-            view.addGestureRecognizer(swipeRight)
+        let views = [homeView!, newsView!]
+        let swipeGesture = SwipeGestureHelper(segmentController: segmentController, views: views, selectedTextAttributes: selectedTextAttributes, normalTextAttributes: normalTextAttributes, view: self.view)
+        self.swipeGestureHelper = swipeGesture
+//        segmentController.addTarget(self, action: #selector(segmentedControlValueChanged), for: .valueChanged)
+//            let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
+//            swipeLeft.direction = .left
+//            view.addGestureRecognizer(swipeLeft)
+//            let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
+//            swipeRight.direction = .right
+//            view.addGestureRecognizer(swipeRight)
     }
-    @objc func segmentedControlValueChanged(sender: UISegmentedControl) {
-        updateContainerViews(for: sender.selectedSegmentIndex)
-    }
-    @objc func handleSwipe(gesture: UISwipeGestureRecognizer) {
-        switch gesture.direction {
-        case .left:
-            updateContainerViews(for: 1)
-        case .right:
-            updateContainerViews(for: 0)
-        default:
-            break
-        }
-    }
-    func updateContainerViews(for selectedSegmentIndex: Int) {
-        switch selectedSegmentIndex {
-        case 0:
-            changeView(selected: selectedSegmentIndex)
-            segmentController.selectedSegmentIndex = 0
-        case 1:
-            changeView(selected: selectedSegmentIndex)
-            segmentController.selectedSegmentIndex = 1
-        default:
-            break
-        }
-    }
+//    @objc func segmentedControlValueChanged(sender: UISegmentedControl) {
+//        updateContainerViews(for: sender.selectedSegmentIndex)
+//    }
+//    @objc func handleSwipe(gesture: UISwipeGestureRecognizer) {
+//        switch gesture.direction {
+//        case .left:
+//            updateContainerViews(for: 1)
+//        case .right:
+//            updateContainerViews(for: 0)
+//        default:
+//            break
+//        }
+//    }
+//    func updateContainerViews(for selectedSegmentIndex: Int) {
+//        switch selectedSegmentIndex {
+//        case 0:
+//            changeView(selected: selectedSegmentIndex)
+//            segmentController.selectedSegmentIndex = 0
+//        case 1:
+//            changeView(selected: selectedSegmentIndex)
+//            segmentController.selectedSegmentIndex = 1
+//        default:
+//            break
+//        }
+//    }
     func changeView(selected: Int){
         switch selected{
         case 0:

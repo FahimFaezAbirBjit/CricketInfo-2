@@ -12,11 +12,10 @@ extension MatchViewCell: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         matchData.count
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.matchInfoCell, for: indexPath) as! MatchInfoViewCell
-        item.localTeamName.text = matchData[indexPath.row].localTeamName
-        item.visitorTeamName.text = matchData[indexPath.row].visitorTeamName
+        item.localTeamName.text = matchData[indexPath.row].localTeamCode
+        item.visitorTeamName.text = matchData[indexPath.row].visitorTeamCode
         item.visitorTeamFlag.sd_setImage(with: URL(string: matchData[indexPath.row].visitorTeamFlag))
         item.localTeamFlag.sd_setImage(with: URL(string: matchData[indexPath.row].localTeamFlag))
         item.venue.text = matchData[indexPath.row].venueName
@@ -38,6 +37,8 @@ extension MatchViewCell: UICollectionViewDataSource{
             item.btnLive.imageView?.image = nil
             item.matchResult.text = matchData[indexPath.row].result
         }else if matchData[indexPath.row].matchType == .upcoming{
+            item.localTeamScore.text = ""
+            item.visitorTeamScore.text = ""
             item.btnLive.isUserInteractionEnabled = false
             item.btnLive.titleLabel?.text = "Upcoming"
             item.btnLive.titleLabel?.textColor = .white

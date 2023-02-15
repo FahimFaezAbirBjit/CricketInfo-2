@@ -85,9 +85,6 @@
                                                 </segments>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="selectedSegmentTintColor" systemColor="systemBackgroundColor"/>
-                                                <connections>
-                                                    <action selector="changeViews:" destination="wfX-Gt-I5F" eventType="valueChanged" id="g0m-1P-e3Z"/>
-                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" name="customColor"/>

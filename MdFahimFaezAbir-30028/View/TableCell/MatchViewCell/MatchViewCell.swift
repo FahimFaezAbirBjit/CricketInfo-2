@@ -16,14 +16,17 @@ class MatchViewCell: UITableViewCell {
         super.awakeFromNib()
         collectionView.delegate = self
         collectionView.dataSource = self
+        print(matchData.count)
         let nib = UINib(nibName: "MatchInfoViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: Constants.matchInfoCell)
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: collectionView.bounds.width * 0.9, height: collectionView.bounds.height * 0.7)
+        layout.scrollDirection = .horizontal
+        collectionView.collectionViewLayout = layout
+    }    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        collectionView.reloadData()
     }
 
 }
