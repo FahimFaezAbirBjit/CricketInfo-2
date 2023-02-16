@@ -10,6 +10,7 @@ import UIKit
 
 class UpcomingVcModel{
     var upcomingMatches: ObservableObject<[Fixture]?> = ObservableObject(value: nil)
+    var indexPathUpcoming: ObservableObject<Int?> = ObservableObject(value: nil)
     func getUpcomingMatches(url: String){
         ApiResponse.shared.getApiData(url: url, completion: { (result: Result<Welcome?, Error>) in
             switch result{
@@ -21,6 +22,9 @@ class UpcomingVcModel{
                 print(error)
             }
         })
+    }
+    func setIndexPath(row: Int){
+        indexPathUpcoming.value = row
     }
     
 }

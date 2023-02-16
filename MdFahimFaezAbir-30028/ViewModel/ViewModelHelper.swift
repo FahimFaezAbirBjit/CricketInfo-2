@@ -50,5 +50,6 @@ class ViewModelHelper{
         visitorTeamName: matches.visitorteam?.name ?? "", visitorTeamScore: String(visitorTeamScore) + "-" + String(visitorTeamWick) + "(\(String(visitorTeamOver)))" ,
         localTeamScore: String(localTeamScore) + "-" + String(localTeamWick) + "(\(String(localTeamOver)))" ,venueName: matches.venue?.name ?? "", stageName: matches.stage?.name ?? "", round: matches.round ?? "", visitorTeamFlag: matches.visitorteam?.imagePath ?? "", localTeamFlag: matches.localteam?.imagePath ?? "",status: matches.status ?? "", result:trimResult(note: matches.note ?? ""),visitorTeamCode: matches.visitorteam?.code ?? "", localTeamCode: matches.localteam?.code ?? "", matchType: matchType)
     }
+    
 }
 

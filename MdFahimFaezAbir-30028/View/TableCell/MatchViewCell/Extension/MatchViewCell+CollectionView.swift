@@ -58,5 +58,8 @@ extension MatchViewCell: UICollectionViewDataSource{
     
 }
 extension MatchViewCell: UICollectionViewDelegate{
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //self.indexPath = indexPath
+        HomeVcModel.indexPath.value = indexPath.row
+    }
 }

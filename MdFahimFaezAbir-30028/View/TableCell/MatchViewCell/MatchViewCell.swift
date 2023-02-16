@@ -11,6 +11,7 @@ class MatchViewCell: UITableViewCell {
 
     @IBOutlet weak var matchViewCell: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    var indexPath: IndexPath?
     var matchData = [Fixture]()
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,5 +29,5 @@ class MatchViewCell: UITableViewCell {
         super.layoutSubviews()
         collectionView.reloadData()
     }
-
+    
 }

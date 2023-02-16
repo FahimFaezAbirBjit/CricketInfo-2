@@ -15,12 +15,31 @@ class RecentVC: UIViewController {
         recentTableView.delegate = self
         recentTableView.dataSource = self
         setUpBindersForRecentMatches()
+        setUpBindersForIndexPath()
         let url = "https://cricket.sportmonks.com/api/v2.0/fixtures/?include=localteam.country,visitorteam.country,runs,venue,stage&fields[fixtures]=id,starting_at,loacalteam,visitorteam,runs,status,live,round,note&sort=-starting_at&filter[starts_between]=2023-01-15T00:00:00.000000Z,2023-02-15T23:59:00.000000Z&api_token=tdfy0GkKqZjQ1x7cZ79dQIT6VLeygjPJaMUIErC8URWie3nG7xatObPGuRnV"
         recentVm.getRecentMatchesMatches(url: url)
     }
     override func viewWillAppear(_ animated: Bool) {
-//        let url = "https://cricket.sportmonks.com/api/v2.0/fixtures/?include=localteam.country,visitorteam.country,runs,venue,stage&fields[fixtures]=id,starting_at,loacalteam,visitorteam,runs,status,live,round,note&sort=-starting_at&filter[starts_between]=2023-01-15T00:00:00.000000Z,2023-02-15T23:59:00.000000Z&api_token=tdfy0GkKqZjQ1x7cZ79dQIT6VLeygjPJaMUIErC8URWie3nG7xatObPGuRnV"
-//        recentVm.getRecentMatchesMatches(url: url)
+        navigationController?.isNavigationBarHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+       // tabBarController?.tabBar.isHidden = true
+        navigationController?.isNavigationBarHidden = false
+    }
+    func setUpBindersForIndexPath(){
+        recentVm.recentIndexPath.bind(listener: { [weak self] row in
+            guard let row = row,let self = self else {return}
+            let storyboard = UIStoryboard(name: "DetailInfo", bundle: nil)
+            if let detailVc = storyboard.instantiateViewController(withIdentifier: Constants.detailInfoVc) as? DetailVc
+            {
+                if let matches = self.recentVm.recentMatches.value {
+                    detailVc.loadViewIfNeeded()
+                    detailVc.detailVc.setFixId(fixId: matches[row].fixId)
+                    self.navigationController?.pushViewController(detailVc, animated: true)
+                }
+
+            }
+        })
     }
     func setUpBindersForRecentMatches(){
         recentVm.recentMatches.bind(listener:{ [weak self] _ in
@@ -68,5 +87,8 @@ extension RecentVC: UITableViewDataSource{
     
 }
 extension RecentVC: UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        recentVm.setIndexPath(row: indexPath.row)
+    }
 }

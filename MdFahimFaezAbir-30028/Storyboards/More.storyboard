@@ -11,7 +11,7 @@
         <!--More-->
         <scene sceneID="s9W-No-XxA">
             <objects>
-                <viewController id="dNs-FL-w94" sceneMemberID="viewController">
+                <viewController id="dNs-FL-w94" customClass="MoreVc" customModule="MdFahimFaezAbir_30028" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vbl-m5-wyx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -12,4 +12,5 @@ struct Constants{
     static let matchInfoCell = "matchInfoCell"
     static let upcomingCell = "upcomingCell"
     static let recentVewCell = "recentVewCell"
+    static let detailInfoVc = "detailInfoVc"
 }

@@ -16,12 +16,32 @@ class UpcomingVC: UIViewController {
         upcomingMatchTableView.delegate = self
         upcomingMatchTableView.dataSource = self
         setUpBindersForUpcomingMatches()
+        setUpBindersForIndexPath()
         let url = "https://cricket.sportmonks.com/api/v2.0/fixtures/?include=localteam.country,visitorteam.country,runs,venue,stage&fields[fixtures]=id,starting_at,loacalteam,visitorteam,runs,status,live,round,note&sort=starting_at&filter[starts_between]=2023-02-15T00:00:00.000000Z,2023-05-20T23:59:00.000000Z&api_token=tdfy0GkKqZjQ1x7cZ79dQIT6VLeygjPJaMUIErC8URWie3nG7xatObPGuRnV"
        upcomingVm.getUpcomingMatches(url: url)
     }
     override func viewWillAppear(_ animated: Bool) {
-//        let url = "https://cricket.sportmonks.com/api/v2.0/fixtures/?include=localteam.country,visitorteam.country,runs,venue,stage&fields[fixtures]=id,starting_at,loacalteam,visitorteam,runs,status,live,round,note&sort=starting_at&filter[starts_between]=2023-02-15T00:00:00.000000Z,2023-05-20T23:59:00.000000Z&api_token=tdfy0GkKqZjQ1x7cZ79dQIT6VLeygjPJaMUIErC8URWie3nG7xatObPGuRnV"
-//       upcomingVm.getUpcomingMatches(url: url)
+        navigationController?.isNavigationBarHidden = true
+      
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+        //tabBarController?.tabBar.isHidden = true
+    }
+    func setUpBindersForIndexPath(){
+        upcomingVm.indexPathUpcoming.bind { [weak self] row in
+            guard let row = row,let self = self else {return}
+            let storyboard = UIStoryboard(name: "DetailInfo", bundle: nil)
+            if let detailVc = storyboard.instantiateViewController(withIdentifier: Constants.detailInfoVc) as? DetailVc
+            {
+                if let matches = self.upcomingVm.upcomingMatches.value {
+                    detailVc.loadViewIfNeeded()
+                    detailVc.detailVc.setFixId(fixId: matches[row].fixId)
+                    self.navigationController?.pushViewController(detailVc, animated: true)
+                }
+
+            }
+        }
     }
     func setUpBindersForUpcomingMatches(){
         upcomingVm.upcomingMatches.bind(listener:{ [weak self] _ in
@@ -31,6 +51,7 @@ class UpcomingVC: UIViewController {
             }
         })
     }
+    
 }
 
 extension UpcomingVC: UITableViewDataSource{
@@ -67,5 +88,6 @@ extension UpcomingVC: UITableViewDataSource{
 extension UpcomingVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        upcomingVm.setIndexPath(row: indexPath.row)
     }
 }

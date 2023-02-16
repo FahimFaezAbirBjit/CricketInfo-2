@@ -25,6 +25,7 @@ class MatchVc: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
+        tabBarController?.tabBar.isHidden = false
 //        networkView.alpha = 0
 //        liveView.alpha = 1
 //        upcomingView.alpha = 0
@@ -39,5 +40,6 @@ class MatchVc: UIViewController {
         let swipeGesture = SwipeGestureHelper(segmentController: segmentController, views: views, selectedTextAttributes: selectedTextAttributes, normalTextAttributes: normalTextAttributes, view: self.view)
         self.swipeGestureHelper = swipeGesture
     }
+  
     
 }
