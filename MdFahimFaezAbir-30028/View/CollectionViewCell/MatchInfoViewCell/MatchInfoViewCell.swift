@@ -26,10 +26,11 @@ class MatchInfoViewCell: UICollectionViewCell {
         localTeamFlag.layer.cornerRadius = localTeamFlag.frame.size.height/2
         visitorTeamFlag.layer.cornerRadius = visitorTeamFlag.frame.size.height/2
         matchView.layer.cornerRadius = 15
-        matchView.layer.shadowColor = UIColor.white.cgColor
+        matchView.layer.shadowColor = UIColor.black.cgColor
         matchView.layer.shadowOffset = CGSize(width: 0, height: 0)
         matchView.layer.shadowRadius = 15
-        matchView.layer.shadowOpacity = 0.5
+        matchView.layer.masksToBounds = true
+        matchView.layer.shadowOpacity = 0.9
     }
     
 }

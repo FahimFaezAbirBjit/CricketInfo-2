@@ -25,7 +25,7 @@ extension HomeVC: UITableViewDataSource{
             return 1
         }
         else {
-            return 5
+            return 10
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -47,6 +47,18 @@ extension HomeVC: UITableViewDataSource{
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.newsCell, for: indexPath)
             return cell
         }
+    }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.section == 0{
+            
+        }else{
+            let translation = CATransform3DTranslate(CATransform3DIdentity, -500, 0, 0)
+            cell.layer.transform = translation
+            UIView.animate(withDuration: 0.5) {
+                cell.layer.transform = CATransform3DIdentity
+            }
+        }
+        
     }
 
 }

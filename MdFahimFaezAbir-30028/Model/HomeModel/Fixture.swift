@@ -11,7 +11,7 @@ enum MatchTypes{
     case recent
     case upcoming
 }
-struct HomeModelData{
+struct Fixture{
     var fixId: Int
     var startingAt: String
     var localTeamName: String
@@ -30,7 +30,7 @@ struct HomeModelData{
     var matchType: MatchTypes
 }
 
-extension HomeModelData{
-    static var homeModelData = [HomeModelData]()
+extension Fixture{
+    static var fixtureData = [Fixture]()
 }
 
