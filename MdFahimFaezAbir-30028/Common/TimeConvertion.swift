@@ -56,7 +56,7 @@ class TimeConvertion {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM dd, yyyy"
         if Calendar.current.isDateInToday(date){
-            dateFormatter.dateFormat = "'today at' h:mm a"
+            dateFormatter.dateFormat = "'Today at' h:mm a"
         }else{
             dateFormatter.dateFormat = "MMMM dd, yyyy"
         }

@@ -8,14 +8,14 @@
 import Foundation
 import UIKit
 
-class UpcomingVcModel{
-    var upcomingMatches: ObservableObject<[Fixture]?> = ObservableObject(value: nil)
-    func getUpcomingMatches(url: String){
+class RecentVcModel{
+    var recentMatches: ObservableObject<[Fixture]?> = ObservableObject(value: nil)
+    func getRecentMatchesMatches(url: String){
         ApiResponse.shared.getApiData(url: url, completion: { (result: Result<Welcome?, Error>) in
             switch result{
             case .success(let welcome):
                 guard let fixture = welcome?.data else {return}
-                self.upcomingMatches.value = ViewModelHelper.shared.setMatchData(matchData: fixture)
+                self.recentMatches.value = ViewModelHelper.shared.setMatchData(matchData: fixture)
              //   self.setMatchData(matchData: recentFix)
             case .failure(let error):
                 print(error)

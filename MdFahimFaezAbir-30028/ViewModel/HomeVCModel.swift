@@ -7,7 +7,7 @@
 
 import Foundation
 class HomeVcModel{
-    var matches: ObservableObject<[HomeModelData]?> = ObservableObject(value: nil)
+    var matches: ObservableObject<[Fixture]?> = ObservableObject(value: nil)
 //    var localTeamScore: Int = 0
 //    var visitorTeamScore: Int = 0
 //    var localTeamWick: Int = 0

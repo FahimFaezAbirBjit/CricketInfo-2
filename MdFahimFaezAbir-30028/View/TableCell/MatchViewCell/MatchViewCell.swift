@@ -11,7 +11,7 @@ class MatchViewCell: UITableViewCell {
 
     @IBOutlet weak var matchViewCell: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
-    var matchData = [HomeModelData]()
+    var matchData = [Fixture]()
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.delegate = self
@@ -20,7 +20,7 @@ class MatchViewCell: UITableViewCell {
         let nib = UINib(nibName: "MatchInfoViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: Constants.matchInfoCell)
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: collectionView.bounds.width * 0.9, height: collectionView.bounds.height * 0.7)
+        layout.itemSize = CGSize(width: collectionView.bounds.width * 0.9, height: collectionView.bounds.height * 0.75)
         layout.scrollDirection = .horizontal
         collectionView.collectionViewLayout = layout
     }    

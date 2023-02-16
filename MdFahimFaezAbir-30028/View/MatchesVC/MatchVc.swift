@@ -25,10 +25,14 @@ class MatchVc: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
-        networkView.alpha = 0
-        liveView.alpha = 1
-        upcomingView.alpha = 0
-        recentView.alpha = 0
+//        networkView.alpha = 0
+//        liveView.alpha = 1
+//        upcomingView.alpha = 0
+//        recentView.alpha = 0
+        networkView.isHidden = true
+        liveView.isHidden = true
+        upcomingView.isHidden = true
+        recentView.isHidden = true
         segmentController.setTitleTextAttributes(selectedTextAttributes, for: .selected)
         segmentController.setTitleTextAttributes(normalTextAttributes, for: .normal)
         let views = [liveView!, upcomingView!,recentView!]

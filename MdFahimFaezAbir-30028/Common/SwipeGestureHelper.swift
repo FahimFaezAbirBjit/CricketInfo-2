@@ -58,10 +58,12 @@ class SwipeGestureHelper{
     private func changeView(selected: Int){
         for (index, view) in views.enumerated() {
             if index == selected {
-                view.alpha = 1
+                view.isHidden = false
+                //view.alpha = 1
                 segmentController.setTitleTextAttributes(selectedTextAttributes, for: .selected)
             } else {
-                view.alpha = 0
+                view.isHidden = true
+                //view.alpha = 0
                 segmentController.setTitleTextAttributes(normalTextAttributes, for: .normal)
             }
         }

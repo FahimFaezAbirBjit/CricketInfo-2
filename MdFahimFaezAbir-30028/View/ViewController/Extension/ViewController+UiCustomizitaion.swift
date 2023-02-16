@@ -24,8 +24,8 @@ extension ViewController{
         navigationController?.isNavigationBarHidden = true
     }
     func initialView(){
-        homeView.alpha = 1
-        newsView.alpha = 0
+        homeView.isHidden = false
+        newsView.isHidden = true
         networkErrorView.alpha = 0
         segmentController.setTitleTextAttributes(selectedTextAttributes, for: .selected)
         segmentController.setTitleTextAttributes(normalTextAttributes, for: .normal)

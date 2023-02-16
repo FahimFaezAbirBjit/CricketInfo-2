@@ -9,21 +9,25 @@ import UIKit
 import SDWebImage
 class UpcomingVC: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var upcomingMatchTableView: UITableView!
     var upcomingVm = UpcomingVcModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+        upcomingMatchTableView.delegate = self
+        upcomingMatchTableView.dataSource = self
         setUpBindersForUpcomingMatches()
         let url = "https://cricket.sportmonks.com/api/v2.0/fixtures/?include=localteam.country,visitorteam.country,runs,venue,stage&fields[fixtures]=id,starting_at,loacalteam,visitorteam,runs,status,live,round,note&sort=starting_at&filter[starts_between]=2023-02-15T00:00:00.000000Z,2023-05-20T23:59:00.000000Z&api_token=tdfy0GkKqZjQ1x7cZ79dQIT6VLeygjPJaMUIErC8URWie3nG7xatObPGuRnV"
        upcomingVm.getUpcomingMatches(url: url)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+//        let url = "https://cricket.sportmonks.com/api/v2.0/fixtures/?include=localteam.country,visitorteam.country,runs,venue,stage&fields[fixtures]=id,starting_at,loacalteam,visitorteam,runs,status,live,round,note&sort=starting_at&filter[starts_between]=2023-02-15T00:00:00.000000Z,2023-05-20T23:59:00.000000Z&api_token=tdfy0GkKqZjQ1x7cZ79dQIT6VLeygjPJaMUIErC8URWie3nG7xatObPGuRnV"
+//       upcomingVm.getUpcomingMatches(url: url)
     }
     func setUpBindersForUpcomingMatches(){
         upcomingVm.upcomingMatches.bind(listener:{ [weak self] _ in
             guard let self = self else {return}
             DispatchQueue.main.async {
-                self.tableView.reloadData()
+                self.upcomingMatchTableView.reloadData()
             }
         })
     }
@@ -52,8 +56,13 @@ extension UpcomingVC: UITableViewDataSource{
         cell.layer.cornerRadius = 10
         return cell
     }
-    
-    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let translation = CATransform3DTranslate(CATransform3DIdentity, -500, 0, 0)
+        cell.layer.transform = translation
+        UIView.animate(withDuration: 0.5) {
+            cell.layer.transform = CATransform3DIdentity
+        }
+    }
 }
 extension UpcomingVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

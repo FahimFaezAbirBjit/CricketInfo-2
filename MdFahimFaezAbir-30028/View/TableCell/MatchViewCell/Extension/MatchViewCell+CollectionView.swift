@@ -24,6 +24,7 @@ extension MatchViewCell: UICollectionViewDataSource{
             item.localTeamScore.text = matchData[indexPath.row].localTeamScore
             item.visitorTeamScore.text = matchData[indexPath.row].visitorTeamScore
             item.btnLive.isUserInteractionEnabled = true
+            item.btnLive.isHidden = false
             item.btnLive.titleLabel?.text = "Live"
             item.btnLive.titleLabel?.textColor = .red
             item.btnLive.imageView?.image = UIImage(systemName: "livephoto")
@@ -32,21 +33,27 @@ extension MatchViewCell: UICollectionViewDataSource{
             item.localTeamScore.text = matchData[indexPath.row].localTeamScore
             item.visitorTeamScore.text = matchData[indexPath.row].visitorTeamScore
             item.btnLive.isUserInteractionEnabled = false
-            item.btnLive.titleLabel?.text = "Finished"
-            item.btnLive.titleLabel?.textColor = .white
+            item.btnLive.isHidden = true
             item.btnLive.imageView?.image = nil
             item.matchResult.text = matchData[indexPath.row].result
         }else if matchData[indexPath.row].matchType == .upcoming{
             item.localTeamScore.text = ""
             item.visitorTeamScore.text = ""
-            item.btnLive.isUserInteractionEnabled = false
-            item.btnLive.titleLabel?.text = "Upcoming"
-            item.btnLive.titleLabel?.textColor = .white
-            item.btnLive.imageView?.image = nil
+            item.btnLive.isUserInteractionEnabled = true
+            item.btnLive.isHidden = false
+            item.btnLive.titleLabel?.text = nil
+            item.btnLive.imageView?.tintColor = UIColor(named: "customColor")
+            item.btnLive.imageView?.image = UIImage(systemName: "bell")
             item.matchResult.text = matchData[indexPath.row].startingAt
         }
         item.layer.cornerRadius = 15
         return item
+    }
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        cell.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        UIView.animate(withDuration: 0.5) {
+            cell.transform = CGAffineTransform.identity
+        }
     }
     
 }
