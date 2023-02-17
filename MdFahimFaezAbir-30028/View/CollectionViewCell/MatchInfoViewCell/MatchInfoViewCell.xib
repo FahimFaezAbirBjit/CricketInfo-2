@@ -56,22 +56,22 @@
                                     <constraint firstAttribute="width" constant="40" id="qQI-rp-v0G"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="220-3(20)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPl-rW-hlG">
-                                <rect key="frame" x="15" y="122" width="95" height="17"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="220-3(20)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPl-rW-hlG">
+                                <rect key="frame" x="15" y="122" width="95" height="16"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
                                 <color key="textColor" name="customColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="180-3(30)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVG-so-NiB">
-                                <rect key="frame" x="266" y="120" width="95" height="21"/>
-                                <fontDescription key="fontDescription" name="Arial-Black" family="Arial Black" pointSize="14"/>
+                                <rect key="frame" x="266" y="120" width="95" height="20"/>
+                                <fontDescription key="fontDescription" name="Arial-Black" family="Arial Black" pointSize="13"/>
                                 <color key="textColor" name="customColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="BAN need 31 runs in 25 balls" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVz-aL-jmU">
-                                <rect key="frame" x="15" y="169.5" width="346" height="15.5"/>
-                                <fontDescription key="fontDescription" name="Arial-Black" family="Arial Black" pointSize="13"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="15" y="168.5" width="346" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Arial-Black" family="Arial Black" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BAN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVE-U7-2wM">
@@ -90,8 +90,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="376" height="35"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1st T-20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMT-9V-7ik">
-                                        <rect key="frame" x="156.5" y="8.5" width="63" height="18"/>
-                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                                        <rect key="frame" x="161.5" y="9" width="53.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -102,18 +102,19 @@
                                     <constraint firstItem="UMT-9V-7ik" firstAttribute="centerY" secondItem="6R0-x3-IQn" secondAttribute="centerY" id="sdA-kA-9je"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2ng-Cv-W0Y">
-                                <rect key="frame" x="10" y="41" width="18" height="16.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="2ng-Cv-W0Y">
+                                <rect key="frame" x="10" y="40" width="18" height="18"/>
                                 <color key="tintColor" name="customColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="18" id="89b-bI-jug"/>
                                     <constraint firstAttribute="height" constant="18" id="nq9-yP-apD"/>
                                 </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mirpur" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XT-Pf-Bfb">
-                                <rect key="frame" x="33" y="42.5" width="32" height="13"/>
-                                <fontDescription key="fontDescription" name="BigCaslon-Medium" family="Big Caslon" pointSize="11"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="33" y="42" width="35" height="14"/>
+                                <fontDescription key="fontDescription" name="BigCaslon-Medium" family="Big Caslon" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -182,7 +183,7 @@
         <image name="BAN" width="800" height="480"/>
         <image name="IND" width="1200" height="800"/>
         <image name="livephoto" catalog="system" width="128" height="124"/>
-        <image name="location" catalog="system" width="128" height="121"/>
+        <image name="placeholder" width="512" height="512"/>
         <image name="vs" width="512" height="512"/>
         <namedColor name="customColor">
             <color red="0.15299999713897705" green="0.14599999785423279" blue="0.23800000548362732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
