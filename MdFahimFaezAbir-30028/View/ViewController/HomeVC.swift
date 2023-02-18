@@ -18,15 +18,28 @@ class HomeVC: UIViewController {
         tableView.dataSource = self
         tableView.delegate  = self
         setUpBindersForMatchData()
-        let url = "https://cricket.sportmonks.com/api/v2.0/fixtures/?include=localteam.country,visitorteam.country,runs,venue,stage&fields[fixtures]=id,starting_at,loacalteam,visitorteam,runs,status,live,round,note&sort=starting_at&filter[starts_between]=2023-02-02T00:00:00.000000Z,2023-02-20T23:59:00.000000Z&api_token=tdfy0GkKqZjQ1x7cZ79dQIT6VLeygjPJaMUIErC8URWie3nG7xatObPGuRnV"
+        let currentDate = Date()
+        let calendar = Calendar.current
+
+        let previousMonth = calendar.date(byAdding: .day, value: -5, to: currentDate)
+        let nextMonth = calendar.date(byAdding: .day, value: 5, to: currentDate)
+        // format the date as desired
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let previousMonthFormatted = dateFormatter.string(from: previousMonth!)
+        print(previousMonthFormatted)
+        let nextMonthFormatted = dateFormatter.string(from: nextMonth!)
+        print(nextMonthFormatted)
+        let url = "https://cricket.sportmonks.com/api/v2.0/fixtures/?include=localteam.country,visitorteam.country,runs,venue,stage&fields[fixtures]=id,starting_at,loacalteam,visitorteam,runs,status,live,round,note&sort=starting_at&filter[starts_between]=\(previousMonthFormatted),\(nextMonthFormatted)&api_token=tdfy0GkKqZjQ1x7cZ79dQIT6VLeygjPJaMUIErC8URWie3nG7xatObPGuRnV"
+        print(url)
         vcModel.getRecentMatches(url: url)
         setUpBindersForIndexPath()
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
        // tabBarController?.tabBar.isHidden = false
-        let url = "https://cricket.sportmonks.com/api/v2.0/fixtures/?include=localteam.country,visitorteam.country,runs,venue,stage&fields[fixtures]=id,starting_at,loacalteam,visitorteam,runs,status,live,round,note&sort=starting_at&filter[starts_between]=2023-02-02T00:00:00.000000Z,2023-02-20T23:59:00.000000Z&api_token=tdfy0GkKqZjQ1x7cZ79dQIT6VLeygjPJaMUIErC8URWie3nG7xatObPGuRnV"
-        vcModel.getRecentMatches(url: url)
+//        let url = "https://cricket.sportmonks.com/api/v2.0/fixtures/?include=localteam.country,visitorteam.country,runs,venue,stage&fields[fixtures]=id,starting_at,loacalteam,visitorteam,runs,status,live,round,note&sort=starting_at&filter[starts_between]=2023-02-02T00:00:00.000000Z,2023-02-20T23:59:00.000000Z&api_token=tdfy0GkKqZjQ1x7cZ79dQIT6VLeygjPJaMUIErC8URWie3nG7xatObPGuRnV"
+//        vcModel.getRecentMatches(url: url)
         setUpBindersForIndexPath()
        tableView.reloadData()
     }
@@ -43,6 +56,9 @@ class HomeVC: UIViewController {
                 if let matches = self.vcModel.matches.value {
                     detailVc.loadViewIfNeeded()
                     detailVc.detailVc.setFixId(fixId: matches[row].fixId)
+                    InfoVcModel.infoId.value = matches[row].fixId
+                    detailVc.title = matches[row].localTeamCode + " V " + matches[row].visitorTeamCode + ", " +  matches[row].round
+                    
                     self.navigationController?.pushViewController(detailVc, animated: true)
                 }
 

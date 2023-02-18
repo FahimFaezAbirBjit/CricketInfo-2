@@ -62,4 +62,14 @@ class TimeConvertion {
         }
         return dateFormatter.string(from: date)
     }
+    func time(date: String)-> String{
+        let inputFormatter = ISO8601DateFormatter()
+        inputFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        guard let date = inputFormatter.date(from: date) else { return "" }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        //guard let date = dateFormatter.date(from: date) else {return ""}
+        print(date)
+        return dateFormatter.string(from: date)
+    }
 }

@@ -234,8 +234,8 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="333" height="32.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6V-if-e3o">
-                                                                    <rect key="frame" x="104" y="7" width="125" height="18"/>
-                                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                                                                    <rect key="frame" x="114" y="7.5" width="105.5" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <color key="textColor" systemColor="systemBackgroundColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -291,18 +291,19 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dhaka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygk-48-dIx">
-                                                            <rect key="frame" x="40" y="35.5" width="38" height="16"/>
+                                                            <rect key="frame" x="45" y="36.5" width="38" height="16"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" systemColor="systemGrayColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="I7z-sd-fcD">
-                                                            <rect key="frame" x="10" y="34.5" width="20" height="18.5"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="I7z-sd-fcD">
+                                                            <rect key="frame" x="15" y="35.5" width="20" height="18"/>
                                                             <color key="tintColor" name="customColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="20" id="cKw-q5-uyF"/>
-                                                                <constraint firstAttribute="height" constant="20" id="zOW-Pm-doR"/>
+                                                                <constraint firstAttribute="height" constant="18" id="zOW-Pm-doR"/>
                                                             </constraints>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="15"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -310,7 +311,7 @@
                                                         <constraint firstItem="sK3-Ka-iJ7" firstAttribute="leading" secondItem="CtC-oC-cKG" secondAttribute="leading" id="ByL-XY-jIg"/>
                                                         <constraint firstAttribute="bottom" secondItem="B7I-3l-pvw" secondAttribute="bottom" constant="10" id="CSH-DO-Grw"/>
                                                         <constraint firstItem="QfB-ac-EPH" firstAttribute="centerY" secondItem="f7J-3b-r8q" secondAttribute="centerY" id="EPB-Lh-2Yr"/>
-                                                        <constraint firstItem="I7z-sd-fcD" firstAttribute="leading" secondItem="CtC-oC-cKG" secondAttribute="leading" constant="10" id="Ex8-p9-kRT"/>
+                                                        <constraint firstItem="I7z-sd-fcD" firstAttribute="leading" secondItem="CtC-oC-cKG" secondAttribute="leading" constant="15" id="Ex8-p9-kRT"/>
                                                         <constraint firstAttribute="trailing" secondItem="B7I-3l-pvw" secondAttribute="trailing" constant="10" id="GpC-ki-RV0"/>
                                                         <constraint firstItem="sK3-Ka-iJ7" firstAttribute="centerX" secondItem="CtC-oC-cKG" secondAttribute="centerX" id="Heu-t3-5rz"/>
                                                         <constraint firstAttribute="trailing" secondItem="Ymp-10-YmP" secondAttribute="trailing" constant="10" id="KzZ-6E-ieR"/>
@@ -320,7 +321,7 @@
                                                         <constraint firstItem="ygk-48-dIx" firstAttribute="leading" secondItem="I7z-sd-fcD" secondAttribute="trailing" constant="10" id="Pvz-O4-5Qh"/>
                                                         <constraint firstItem="GYQ-a5-eFm" firstAttribute="leading" secondItem="CtC-oC-cKG" secondAttribute="leading" constant="10" id="SNk-9f-3H0"/>
                                                         <constraint firstItem="B7I-3l-pvw" firstAttribute="top" secondItem="QfB-ac-EPH" secondAttribute="bottom" constant="10" id="V0t-hE-wlh"/>
-                                                        <constraint firstItem="I7z-sd-fcD" firstAttribute="top" secondItem="sK3-Ka-iJ7" secondAttribute="bottom" constant="1" id="ZEz-MC-fIa"/>
+                                                        <constraint firstItem="I7z-sd-fcD" firstAttribute="top" secondItem="sK3-Ka-iJ7" secondAttribute="bottom" constant="3" id="ZEz-MC-fIa"/>
                                                         <constraint firstItem="gGe-7a-ioI" firstAttribute="leading" secondItem="GYQ-a5-eFm" secondAttribute="trailing" constant="10" id="dbI-IM-ieC"/>
                                                         <constraint firstItem="f7J-3b-r8q" firstAttribute="leading" secondItem="CtC-oC-cKG" secondAttribute="leading" constant="10" id="gQA-PJ-hLQ"/>
                                                         <constraint firstAttribute="trailing" secondItem="QfB-ac-EPH" secondAttribute="trailing" constant="10" id="js2-rc-81H"/>
@@ -401,8 +402,8 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="335" height="86.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uM-xb-kOB">
-                                                                    <rect key="frame" x="105" y="34.5" width="125" height="18"/>
-                                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                                                                    <rect key="frame" x="115" y="35" width="105.5" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <color key="textColor" systemColor="systemBackgroundColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -440,18 +441,19 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dhaka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IuQ-nl-xYT">
-                                                            <rect key="frame" x="40" y="89.5" width="285" height="16"/>
+                                                            <rect key="frame" x="45" y="90.5" width="280" height="16"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" systemColor="systemGrayColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="p9b-cf-s9B">
-                                                            <rect key="frame" x="10" y="88.5" width="20" height="18.5"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="p9b-cf-s9B">
+                                                            <rect key="frame" x="15" y="89.5" width="20" height="18"/>
                                                             <color key="tintColor" name="customColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="20" id="Lh7-YO-fsw"/>
-                                                                <constraint firstAttribute="height" constant="20" id="xTT-Jj-dMt"/>
+                                                                <constraint firstAttribute="height" constant="18" id="xTT-Jj-dMt"/>
                                                             </constraints>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="15"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="United Arab Amirat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qB2-t3-TVQ">
                                                             <rect key="frame" x="50" y="117" width="145" height="21"/>
@@ -489,8 +491,8 @@
                                                         <constraint firstItem="gm4-f0-cLN" firstAttribute="top" secondItem="Z5r-3M-Kok" secondAttribute="bottom" constant="10" id="QHe-MO-2Mu"/>
                                                         <constraint firstItem="BVC-dj-5XW" firstAttribute="centerX" secondItem="Bpq-HJ-73w" secondAttribute="centerX" id="RVb-Ed-eAo"/>
                                                         <constraint firstItem="IuQ-nl-xYT" firstAttribute="leading" secondItem="p9b-cf-s9B" secondAttribute="trailing" constant="10" id="TV9-OL-MWa"/>
-                                                        <constraint firstItem="p9b-cf-s9B" firstAttribute="top" secondItem="BVC-dj-5XW" secondAttribute="bottom" constant="1" id="U4J-mS-Ux5"/>
-                                                        <constraint firstItem="p9b-cf-s9B" firstAttribute="leading" secondItem="Bpq-HJ-73w" secondAttribute="leading" constant="10" id="UNL-Jx-ati"/>
+                                                        <constraint firstItem="p9b-cf-s9B" firstAttribute="top" secondItem="BVC-dj-5XW" secondAttribute="bottom" constant="3" id="U4J-mS-Ux5"/>
+                                                        <constraint firstItem="p9b-cf-s9B" firstAttribute="leading" secondItem="Bpq-HJ-73w" secondAttribute="leading" constant="15" id="UNL-Jx-ati"/>
                                                         <constraint firstItem="IuQ-nl-xYT" firstAttribute="centerY" secondItem="p9b-cf-s9B" secondAttribute="centerY" id="WMX-yU-BOX"/>
                                                         <constraint firstItem="JsP-l1-Hlv" firstAttribute="leading" secondItem="Bpq-HJ-73w" secondAttribute="leading" constant="10" id="atN-zu-xbh"/>
                                                         <constraint firstAttribute="trailing" secondItem="IuQ-nl-xYT" secondAttribute="trailing" constant="10" id="c7p-Ge-XNK"/>
@@ -548,7 +550,7 @@
         <image name="bell" catalog="system" width="125" height="128"/>
         <image name="cricket.ball.fill" catalog="system" width="128" height="123"/>
         <image name="errors" width="512" height="512"/>
-        <image name="location" catalog="system" width="128" height="121"/>
+        <image name="placeholder" width="512" height="512"/>
         <namedColor name="customColor">
             <color red="0.15299999713897705" green="0.14599999785423279" blue="0.23800000548362732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
