@@ -9,6 +9,6 @@ import Foundation
 class DetailVcModel{
     var fixtureId: ObservableObject<Int?> = ObservableObject(value: nil)
     func setFixId(fixId: Int){
-        fixtureId.value = fixId
+       fixtureId.value = fixId
     }
 }

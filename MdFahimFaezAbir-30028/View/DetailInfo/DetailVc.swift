@@ -34,7 +34,7 @@ class DetailVc: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         segmentController.setTitleTextAttributes(selectedTextAttributes, for: .selected)
         segmentController.setTitleTextAttributes(normalTextAttributes, for: .normal)
-       setUpBindersForFixId()
+      // setUpBindersForFixId()
       addSwipeGesture()
     }
     func  addSwipeGesture(){
@@ -45,7 +45,9 @@ class DetailVc: UIViewController {
     }
     func setUpBindersForFixId(){
         detailVc.fixtureId.bind(listener: { [weak self] fixId in
-            print(fixId)
+            guard let _ =  self else {return}
+           
+          
         })
     }
     override func viewWillAppear(_ animated: Bool) {

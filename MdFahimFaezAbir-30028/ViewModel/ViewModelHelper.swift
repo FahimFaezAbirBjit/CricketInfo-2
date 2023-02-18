@@ -50,6 +50,14 @@ class ViewModelHelper{
         visitorTeamName: matches.visitorteam?.name ?? "", visitorTeamScore: String(visitorTeamScore) + "-" + String(visitorTeamWick) + "(\(String(visitorTeamOver)))" ,
         localTeamScore: String(localTeamScore) + "-" + String(localTeamWick) + "(\(String(localTeamOver)))" ,venueName: matches.venue?.name ?? "", stageName: matches.stage?.name ?? "", round: matches.round ?? "", visitorTeamFlag: matches.visitorteam?.imagePath ?? "", localTeamFlag: matches.localteam?.imagePath ?? "",status: matches.status ?? "", result:trimResult(note: matches.note ?? ""),visitorTeamCode: matches.visitorteam?.code ?? "", localTeamCode: matches.localteam?.code ?? "", matchType: matchType)
     }
+    func setInfoData(info: InfoData)-> Info{
+        dump(info)
+        let startingAt = TimeConvertion.shared.formatDate(date: info.startingAt ?? "N/A")
+        let time = TimeConvertion.shared.time(date: info.startingAt ?? "N/A")
+        let info = Info(match: info.round ?? "N/A", series: info.stage?.name ?? "N/A", leauge: info.league?.name ?? "N/A", date: startingAt, time: time, toss: (info.tosswon?.name ?? "N/A" ) + " won the toss and opt to " + (info.elected ?? "N/A") , umpires: (info.firstumpire?.fullname ?? "N/A") + ", " + (info.secondumpire?.fullname ?? "N/A"), thirdUmpire: info.tvumpire?.fullname ?? "N/A", refree: info.referee?.fullname ?? "N/A",venue: info.venue?.name ?? "N/A", capacity: String(info.venue?.capacity ?? 0), city: info.venue?.city ?? "N/A")
+        dump(info)
+        return info
+    }
     
 }
 
