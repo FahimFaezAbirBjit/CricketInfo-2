@@ -48,6 +48,7 @@ class UpcomingVC: UIViewController {
                     detailVc.loadViewIfNeeded()
                     detailVc.detailVc.setFixId(fixId: matches[row].fixId)
                     InfoVcModel.infoId.value = matches[row].fixId
+                    ScoreCardVcModel.scorecardId.value = matches[row].fixId
                     detailVc.title = matches[row].localTeamCode + " V " + matches[row].visitorTeamCode + ", " +  matches[row].round
                     self.navigationController?.pushViewController(detailVc, animated: true)
                 }

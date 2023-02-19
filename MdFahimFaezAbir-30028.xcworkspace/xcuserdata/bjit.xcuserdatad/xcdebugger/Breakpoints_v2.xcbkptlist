@@ -7,97 +7,177 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2F47E81F-27B8-45F2-8354-FB3325C44FDD"
+            uuid = "4AB9EB99-8AE7-40A5-B2B0-E71E4DA846B0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MdFahimFaezAbir-30028/Common/TimeConvertion.swift"
+            filePath = "MdFahimFaezAbir-30028/View/DetailInfo/ScoreCardVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "time(date:)"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "setUpBindersForFixId()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "588DDB19-B9B6-4673-92A6-1650B57542A5"
+            uuid = "CB9A4E0D-0CCF-4653-98F1-E6FB208AE253"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MdFahimFaezAbir-30028/Common/TimeConvertion.swift"
+            filePath = "MdFahimFaezAbir-30028/View/DetailInfo/ScoreCardVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "time(date:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "setUpBindersForFixId()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "39B6BF52-1C88-48FB-B50B-5732CE264029"
+            uuid = "4C276EA5-AFA6-45E1-8F6A-B0AFE91BA685"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MdFahimFaezAbir-30028/Common/TimeConvertion.swift"
+            filePath = "MdFahimFaezAbir-30028/ViewModel/ScoreCardVcModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "time(date:)"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "getscore(url:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AE5A9BE6-4A83-47F8-9BA3-974703BAFBC1"
+            uuid = "323E94E7-F409-4380-BD9A-0A10D58C8494"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MdFahimFaezAbir-30028/Common/TimeConvertion.swift"
+            filePath = "MdFahimFaezAbir-30028/Services/ApiResponse.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "time(date:)"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "getApiData(url:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "AE5A9BE6-4A83-47F8-9BA3-974703BAFBC1 - fbb9b4bf3b242d3f"
+                  uuid = "323E94E7-F409-4380-BD9A-0A10D58C8494 - 596751106660a8b9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MdFahimFaezAbir_30028.TimeConvertion.time(date: Swift.String) -&gt; Swift.String"
+                  symbolName = "MdFahimFaezAbir_30028.ApiResponse.getApiData&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(url: Swift.String, completion: (Swift.Result&lt;Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "MdFahimFaezAbir-30028"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bjit/Desktop/iOS-Dev/Day51/MdFahimFaezAbir-30028/MdFahimFaezAbir-30028/Common/TimeConvertion.swift"
+                  urlString = "file:///Users/bjit/Desktop/iOS-Dev/Day51/MdFahimFaezAbir-30028/MdFahimFaezAbir-30028/Services/ApiResponse.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "328">
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "700">
                </Location>
                <Location
-                  uuid = "AE5A9BE6-4A83-47F8-9BA3-974703BAFBC1 - fbb9b4bf3b242d3f"
+                  uuid = "323E94E7-F409-4380-BD9A-0A10D58C8494 - ecd980c4ac81b1c2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MdFahimFaezAbir_30028.TimeConvertion.time(date: Swift.String) -&gt; Swift.String"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MdFahimFaezAbir_30028.ApiResponse.getApiData&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(url: Swift.String, completion: (Swift.Result&lt;Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "MdFahimFaezAbir-30028"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bjit/Desktop/iOS-Dev/Day51/MdFahimFaezAbir-30028/MdFahimFaezAbir-30028/Common/TimeConvertion.swift"
+                  urlString = "file:///Users/bjit/Desktop/iOS-Dev/Day51/MdFahimFaezAbir-30028/MdFahimFaezAbir-30028/Services/ApiResponse.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "980">
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "456">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D787B5F6-A921-43AD-AC1C-810A185F978F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MdFahimFaezAbir-30028/Services/ApiResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "getApiData(url:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DEA6BA25-799C-4A18-A51D-173F56B08B83"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MdFahimFaezAbir-30028/Services/ApiResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "getApiData(url:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DEA6BA25-799C-4A18-A51D-173F56B08B83 - 596751106660a87b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MdFahimFaezAbir_30028.ApiResponse.getApiData&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(url: Swift.String, completion: (Swift.Result&lt;Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MdFahimFaezAbir-30028"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bjit/Desktop/iOS-Dev/Day51/MdFahimFaezAbir-30028/MdFahimFaezAbir-30028/Services/ApiResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "432">
+               </Location>
+               <Location
+                  uuid = "DEA6BA25-799C-4A18-A51D-173F56B08B83 - 596751106660a87b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MdFahimFaezAbir_30028.ApiResponse.getApiData&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(url: Swift.String, completion: (Swift.Result&lt;Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MdFahimFaezAbir-30028"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bjit/Desktop/iOS-Dev/Day51/MdFahimFaezAbir-30028/MdFahimFaezAbir-30028/Services/ApiResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "1136">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C90DB2B2-06D5-48D0-9D3E-6DE70DDAC74F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MdFahimFaezAbir-30028/Services/ApiResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "getApiData(url:completion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

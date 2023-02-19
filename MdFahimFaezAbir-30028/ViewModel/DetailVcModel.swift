@@ -8,6 +8,7 @@
 import Foundation
 class DetailVcModel{
     var fixtureId: ObservableObject<Int?> = ObservableObject(value: nil)
+   // static var flag: ObservableObject<Bool?> = ObservableObject(value: nil)
     func setFixId(fixId: Int){
        fixtureId.value = fixId
     }

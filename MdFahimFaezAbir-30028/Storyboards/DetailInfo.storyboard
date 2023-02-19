@@ -822,24 +822,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="589.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ScoreCard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCl-ff-ffZ">
-                                <rect key="frame" x="147" y="284.5" width="81" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6B7-U0-BMR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdfhasdjfbasfdbvcsZHDFgbvsafasdfnvgdsahfwefdsa" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bz-oZ-j4u">
+                                        <rect key="frame" x="10" y="5" width="355" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="5Bz-oZ-j4u" secondAttribute="bottom" constant="5" id="0yd-kT-ocE"/>
+                                    <constraint firstItem="5Bz-oZ-j4u" firstAttribute="centerX" secondItem="6B7-U0-BMR" secondAttribute="centerX" id="1Va-sa-zTV"/>
+                                    <constraint firstItem="5Bz-oZ-j4u" firstAttribute="leading" secondItem="6B7-U0-BMR" secondAttribute="leading" constant="10" id="SL5-3q-jzA"/>
+                                    <constraint firstItem="5Bz-oZ-j4u" firstAttribute="top" secondItem="6B7-U0-BMR" secondAttribute="top" constant="5" id="Seu-ee-c7G"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LD8-iX-kWD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="DCl-ff-ffZ" firstAttribute="centerX" secondItem="lSG-9g-vR1" secondAttribute="centerX" id="CFK-3b-xDS"/>
-                            <constraint firstItem="DCl-ff-ffZ" firstAttribute="centerY" secondItem="lSG-9g-vR1" secondAttribute="centerY" id="Edx-bw-mI0"/>
+                            <constraint firstItem="6B7-U0-BMR" firstAttribute="leading" secondItem="LD8-iX-kWD" secondAttribute="leading" id="amk-iE-858"/>
+                            <constraint firstItem="6B7-U0-BMR" firstAttribute="centerX" secondItem="lSG-9g-vR1" secondAttribute="centerX" id="mL7-5T-Zcu"/>
+                            <constraint firstItem="6B7-U0-BMR" firstAttribute="top" secondItem="LD8-iX-kWD" secondAttribute="top" id="n34-GQ-lNm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="result" destination="5Bz-oZ-j4u" id="ICf-NN-e6u"/>
+                        <outlet property="resultView" destination="6B7-U0-BMR" id="T6T-d8-S3u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Azy-hd-q3j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1053" y="584"/>
+            <point key="canvasLocation" x="-1055.2" y="544.22788605697156"/>
         </scene>
         <!--Squad Vc-->
         <scene sceneID="XbW-rD-kYb">

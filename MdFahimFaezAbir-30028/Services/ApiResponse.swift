@@ -10,6 +10,7 @@ class ApiResponse {
     static let shared = ApiResponse()
     private init() {}
     func getApiData<T: Codable>(url: String, completion: @escaping (Result<T?, Error>) -> Void) {
+        print(url)
         guard let url = URL(string: url) else { return }
         print(url)
         URLSession.shared.dataTask(with: url) { data, _, error in
@@ -25,6 +26,7 @@ class ApiResponse {
                     )
                    // print(.success(result))
                     completion(.success(result))
+                  //  dump(result)
                 } catch {
                     completion(.failure(error))
                 }
