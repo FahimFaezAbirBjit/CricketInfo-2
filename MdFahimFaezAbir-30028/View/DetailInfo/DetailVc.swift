@@ -36,6 +36,7 @@ class DetailVc: UIViewController {
         segmentController.setTitleTextAttributes(normalTextAttributes, for: .normal)
       // setUpBindersForFixId()
       addSwipeGesture()
+      setUpbindersForFlag()
     }
     func  addSwipeGesture(){
         
@@ -57,5 +58,7 @@ class DetailVc: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         tabBarController?.tabBar.isHidden = false
     }
-    
+    func setUpbindersForFlag(){
+        
+    }
 }
