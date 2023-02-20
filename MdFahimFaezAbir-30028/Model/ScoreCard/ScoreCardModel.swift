@@ -88,7 +88,7 @@ struct Batting: Codable {
     var batsman: Batsman?
     var bowler, catchstump: Batsman?
     var batsmanout, runoutby: Batsman?
-
+    var result: Results?
     enum CodingKeys: String, CodingKey {
         case resource, id, sort
         case fixtureID = "fixture_id"
@@ -108,10 +108,28 @@ struct Batting: Codable {
         case fowBalls = "fow_balls"
         case rate
         case updatedAt = "updated_at"
-        case team, batsman, bowler, catchstump, batsmanout, runoutby
+        case team, batsman, bowler, catchstump, batsmanout, runoutby,result
     }
 }
+//MARK - Result
+struct Results: Codable {
+    var resource: String?
+    var id: Int?
+    var name: String?
+    var runs: Int?
+    var four, six: Bool?
+    var bye, legBye, noball, noballRuns: Int?
+    var isWicket, ball, out: Bool?
 
+    enum CodingKeys: String, CodingKey {
+        case resource, id, name, runs, four, six, bye
+        case legBye = "leg_bye"
+        case noball
+        case noballRuns = "noball_runs"
+        case isWicket = "is_wicket"
+        case ball, out
+    }
+}
 // MARK: - Batsman
 struct Batsman: Codable {
     var resource: String?

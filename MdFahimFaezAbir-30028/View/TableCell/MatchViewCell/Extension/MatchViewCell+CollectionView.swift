@@ -23,11 +23,13 @@ extension MatchViewCell: UICollectionViewDataSource{
         if matchData[indexPath.row].matchType == .live{
             item.localTeamScore.text = matchData[indexPath.row].localTeamScore
             item.visitorTeamScore.text = matchData[indexPath.row].visitorTeamScore
-            item.btnLive.isUserInteractionEnabled = true
-            item.btnLive.isHidden = false
-            item.btnLive.titleLabel?.text = "Live"
-            item.btnLive.titleLabel?.textColor = .red
-            item.btnLive.imageView?.image = UIImage(systemName: "livephoto")
+            if matchData[indexPath.row].isLive{
+                item.btnLive.isUserInteractionEnabled = true
+                item.btnLive.isHidden = false
+                item.btnLive.titleLabel?.text = "Live"
+                item.btnLive.titleLabel?.textColor = .red
+                item.btnLive.imageView?.image = UIImage(systemName: "livephoto")
+            }
         }
         else if matchData[indexPath.row].matchType == .recent {
             item.localTeamScore.text = matchData[indexPath.row].localTeamScore
@@ -39,12 +41,14 @@ extension MatchViewCell: UICollectionViewDataSource{
         }else if matchData[indexPath.row].matchType == .upcoming{
             item.localTeamScore.text = ""
             item.visitorTeamScore.text = ""
-            item.btnLive.isUserInteractionEnabled = true
-            item.btnLive.isHidden = false
-            item.btnLive.titleLabel?.text = nil
-            item.btnLive.imageView?.tintColor = UIColor(named: "customColor")
-            item.btnLive.imageView?.image = UIImage(systemName: "bell")
-            item.matchResult.text = matchData[indexPath.row].startingAt
+            if !matchData[indexPath.row].isLive{
+                item.btnLive.isUserInteractionEnabled = true
+                item.btnLive.isHidden = false
+                item.btnLive.titleLabel?.text = nil
+                item.btnLive.imageView?.tintColor = UIColor(named: "customColor")
+                item.btnLive.imageView?.image = UIImage(systemName: "bell")
+                item.matchResult.text = matchData[indexPath.row].startingAt
+            }
         }
         item.layer.cornerRadius = 15
         return item

@@ -57,12 +57,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTD-zy-M9R">
                                 <rect key="frame" x="0.0" y="110.5" width="375" height="556.5"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVG-ec-5NY" userLabel="networkView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="556.5"/>
-                                        <connections>
-                                            <segue destination="7e8-DI-5jy" kind="embed" id="WQt-az-lEH"/>
-                                        </connections>
-                                    </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kuW-EI-3kW" userLabel="Live">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="556.5"/>
                                         <connections>
@@ -84,12 +78,8 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="IVG-ec-5NY" firstAttribute="leading" secondItem="MTD-zy-M9R" secondAttribute="leading" id="0f5-9w-oKI"/>
                                     <constraint firstAttribute="trailing" secondItem="LGx-jb-k8j" secondAttribute="trailing" id="1GB-oC-b8q"/>
                                     <constraint firstItem="kuW-EI-3kW" firstAttribute="leading" secondItem="MTD-zy-M9R" secondAttribute="leading" id="2eV-5h-iLn"/>
-                                    <constraint firstAttribute="trailing" secondItem="IVG-ec-5NY" secondAttribute="trailing" id="30y-mx-Z6d"/>
-                                    <constraint firstItem="IVG-ec-5NY" firstAttribute="top" secondItem="MTD-zy-M9R" secondAttribute="top" id="4KY-yr-kSs"/>
-                                    <constraint firstAttribute="bottom" secondItem="IVG-ec-5NY" secondAttribute="bottom" id="5kQ-Qr-wyM"/>
                                     <constraint firstAttribute="bottom" secondItem="kuW-EI-3kW" secondAttribute="bottom" id="6Jg-Gk-Ts5"/>
                                     <constraint firstItem="Fgm-7P-Ktw" firstAttribute="leading" secondItem="MTD-zy-M9R" secondAttribute="leading" id="6cv-0m-AiY"/>
                                     <constraint firstItem="kuW-EI-3kW" firstAttribute="top" secondItem="MTD-zy-M9R" secondAttribute="top" id="84n-MM-cyk"/>
@@ -127,7 +117,6 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="liveView" destination="kuW-EI-3kW" id="SY2-uU-EjU"/>
-                        <outlet property="networkView" destination="IVG-ec-5NY" id="dng-Qn-Epc"/>
                         <outlet property="recentView" destination="LGx-jb-k8j" id="fsg-e5-oYF"/>
                         <outlet property="segmentController" destination="iNS-aa-gVt" id="GyP-ul-Srg"/>
                         <outlet property="upcomingView" destination="Fgm-7P-Ktw" id="uk2-kI-x9G"/>
@@ -154,32 +143,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fvA-sK-et1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2609.9236641221373" y="198.59154929577466"/>
-        </scene>
-        <!--Matches Network Error Vc-->
-        <scene sceneID="AAL-ow-xEB">
-            <objects>
-                <viewController id="7e8-DI-5jy" customClass="MatchesNetworkErrorVc" customModule="MdFahimFaezAbir_30028" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VI0-xO-xJe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="556.5"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="errors" translatesAutoresizingMaskIntoConstraints="NO" id="oif-so-LIG">
-                                <rect key="frame" x="73" y="245" width="229" height="66.5"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="jTk-9X-S9V"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="oif-so-LIG" firstAttribute="height" secondItem="VI0-xO-xJe" secondAttribute="height" multiplier="0.12" id="CqG-FY-Gdx"/>
-                            <constraint firstItem="oif-so-LIG" firstAttribute="centerX" secondItem="VI0-xO-xJe" secondAttribute="centerX" id="Qd7-ay-TWA"/>
-                            <constraint firstItem="oif-so-LIG" firstAttribute="width" secondItem="VI0-xO-xJe" secondAttribute="width" multiplier="0.610687" id="d2B-vP-paO"/>
-                            <constraint firstItem="oif-so-LIG" firstAttribute="centerY" secondItem="VI0-xO-xJe" secondAttribute="centerY" id="o6u-cb-fhj"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kTz-yB-5HR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4184" y="174"/>
         </scene>
         <!--LiveVC-->
         <scene sceneID="Jyr-b6-Rh3">
@@ -234,7 +197,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="333" height="32.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6V-if-e3o">
-                                                                    <rect key="frame" x="114" y="7.5" width="105.5" height="17"/>
+                                                                    <rect key="frame" x="113.5" y="7.5" width="106" height="17"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <color key="textColor" systemColor="systemBackgroundColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -402,7 +365,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="335" height="86.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uM-xb-kOB">
-                                                                    <rect key="frame" x="115" y="35" width="105.5" height="17"/>
+                                                                    <rect key="frame" x="114.5" y="35" width="106" height="17"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <color key="textColor" systemColor="systemBackgroundColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -549,7 +512,6 @@
         <image name="IND" width="1200" height="800"/>
         <image name="bell" catalog="system" width="125" height="128"/>
         <image name="cricket.ball.fill" catalog="system" width="128" height="123"/>
-        <image name="errors" width="512" height="512"/>
         <image name="placeholder" width="512" height="512"/>
         <namedColor name="customColor">
             <color red="0.15299999713897705" green="0.14599999785423279" blue="0.23800000548362732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

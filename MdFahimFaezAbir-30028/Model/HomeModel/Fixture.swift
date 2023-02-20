@@ -28,6 +28,7 @@ struct Fixture{
     var visitorTeamCode: String
     var localTeamCode: String
     var matchType: MatchTypes
+    var isLive: Bool
 }
 
 extension Fixture{

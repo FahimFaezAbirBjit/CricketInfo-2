@@ -32,6 +32,18 @@ class UpcomingVC: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
+        let currentDate = Date()
+        let calendar = Calendar.current
+
+        let previousDay = calendar.date(byAdding: .day, value: -1, to: currentDate)
+        let nextMonth = calendar.date(byAdding: .month, value: 7, to: currentDate)
+        // format the date as desired
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let previousDayFormatted = dateFormatter.string(from: currentDate)
+        let nextMonthFormatted = dateFormatter.string(from: nextMonth!)
+        let url = "https://cricket.sportmonks.com/api/v2.0/fixtures/?include=localteam.country,visitorteam.country,runs,venue,stage&fields[fixtures]=id,starting_at,loacalteam,visitorteam,runs,status,live,round,note&sort=starting_at&filter[starts_between]=\(previousDayFormatted),\(nextMonthFormatted)&api_token=tdfy0GkKqZjQ1x7cZ79dQIT6VLeygjPJaMUIErC8URWie3nG7xatObPGuRnV"
+       upcomingVm.getUpcomingMatches(url: url)
       
     }
     override func viewWillDisappear(_ animated: Bool) {
