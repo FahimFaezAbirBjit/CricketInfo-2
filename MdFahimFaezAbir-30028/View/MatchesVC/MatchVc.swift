@@ -9,7 +9,6 @@ import UIKit
 
 class MatchVc: UIViewController {
    //MARK: - Outlet
-    @IBOutlet weak var networkView: UIView!
     @IBOutlet weak var liveView: UIView!
     @IBOutlet weak var upcomingView: UIView!
     @IBOutlet weak var recentView: UIView!
@@ -30,7 +29,7 @@ class MatchVc: UIViewController {
 //        liveView.alpha = 1
 //        upcomingView.alpha = 0
 //        recentView.alpha = 0
-        networkView.isHidden = true
+      //  networkView.isHidden = true
         liveView.isHidden = true
         upcomingView.isHidden = true
         recentView.isHidden = true

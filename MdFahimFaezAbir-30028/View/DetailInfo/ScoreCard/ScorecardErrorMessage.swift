@@ -1,13 +1,13 @@
 //
-//  MatchesNetworkErrorVc.swift
+//  ScorecardErrorMessage.swift
 //  MdFahimFaezAbir-30028
 //
-//  Created by Bjit on 15/2/23.
+//  Created by Bjit on 20/2/23.
 //
 
 import UIKit
 
-class MatchesNetworkErrorVc: UIViewController {
+class ScorecardErrorMessage: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

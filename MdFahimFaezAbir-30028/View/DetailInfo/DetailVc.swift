@@ -15,7 +15,6 @@ class DetailVc: UIViewController {
     @IBOutlet weak var scoreCardView: UIView!
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var liveView: UIView!
-    @IBOutlet weak var networkView: UIView!
     var swipeGestureHelper: SwipeGestureHelper?
     //MARK: - Variable
     let normalTextAttributes: [NSAttributedString.Key: Any] = [
@@ -28,7 +27,6 @@ class DetailVc: UIViewController {
         super.viewDidLoad()
         liveView.isHidden = false
         infoView.isHidden = true
-        networkView.isHidden = true
         scoreCardView.isHidden = true
         squadView.isHidden = true
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
