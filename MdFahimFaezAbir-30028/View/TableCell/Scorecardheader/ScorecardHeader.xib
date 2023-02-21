@@ -19,26 +19,26 @@
                     <rect key="frame" x="0.0" y="0.0" width="437" height="61"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJD-g4-BJN">
-                            <rect key="frame" x="20" y="20" width="42" height="21"/>
+                            <rect key="frame" x="10" y="20" width="42" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" systemColor="systemBackgroundColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4L-GM-3Y1">
-                            <rect key="frame" x="330" y="20" width="42" height="21"/>
+                            <rect key="frame" x="340" y="20" width="42" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" systemColor="systemBackgroundColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEc-fd-97c">
-                            <rect key="frame" x="382" y="13" width="35" height="35"/>
+                            <rect key="frame" x="392" y="13" width="35" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="35" id="3c8-at-Q8u"/>
                                 <constraint firstAttribute="height" constant="35" id="u1d-21-iVa"/>
                             </constraints>
                             <color key="tintColor" systemColor="systemBackgroundColor"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="chevron.up.circle" catalog="system"/>
+                            <buttonConfiguration key="configuration" style="plain"/>
                         </button>
                     </subviews>
                     <color key="backgroundColor" name="customColor"/>
@@ -47,8 +47,8 @@
                         <constraint firstItem="Z4L-GM-3Y1" firstAttribute="centerY" secondItem="mMi-Dn-2xt" secondAttribute="centerY" id="BPK-a0-9ZM"/>
                         <constraint firstItem="hEc-fd-97c" firstAttribute="centerY" secondItem="mMi-Dn-2xt" secondAttribute="centerY" id="CJ2-dj-l3D"/>
                         <constraint firstItem="hEc-fd-97c" firstAttribute="leading" secondItem="Z4L-GM-3Y1" secondAttribute="trailing" constant="10" id="IT5-jT-i3o"/>
-                        <constraint firstAttribute="trailing" secondItem="hEc-fd-97c" secondAttribute="trailing" constant="20" id="Tdt-jS-OYR"/>
-                        <constraint firstItem="dJD-g4-BJN" firstAttribute="leading" secondItem="mMi-Dn-2xt" secondAttribute="leading" constant="20" id="WQN-Dg-5UJ"/>
+                        <constraint firstAttribute="trailing" secondItem="hEc-fd-97c" secondAttribute="trailing" constant="10" id="Tdt-jS-OYR"/>
+                        <constraint firstItem="dJD-g4-BJN" firstAttribute="leading" secondItem="mMi-Dn-2xt" secondAttribute="leading" constant="10" id="WQN-Dg-5UJ"/>
                     </constraints>
                 </view>
             </subviews>
@@ -67,11 +67,10 @@
                 <outlet property="inings" destination="dJD-g4-BJN" id="fxF-lD-wlA"/>
                 <outlet property="score" destination="Z4L-GM-3Y1" id="bH3-W4-wbc"/>
             </connections>
-            <point key="canvasLocation" x="593" y="-252"/>
+            <point key="canvasLocation" x="591.60305343511448" y="-252.46478873239437"/>
         </view>
     </objects>
     <resources>
-        <image name="chevron.up.circle" catalog="system" width="128" height="123"/>
         <namedColor name="customColor">
             <color red="0.15299999713897705" green="0.14599999785423279" blue="0.23800000548362732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

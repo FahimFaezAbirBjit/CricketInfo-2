@@ -34,12 +34,12 @@ class ScoreCardVc: UIViewController {
         })
     }
     func setUpBindersForScorecard(){
-//        scorecardVc.scorecard.bind(listener: { [weak self] scorecard in
-//            guard let self = self else {return}
-//            DispatchQueue.main.async {
-//                self.result.text = scorecard?.note
-//            }
-//        })
+        scorecardVc.teamInfo.bind(listener: { [weak self] teamInfo in
+            guard let self = self else {return}
+            DispatchQueue.main.async {
+                self.result.text = teamInfo?.note
+            }
+        })
     }
     func setUpBindersForIsUpcoming(){
         scorecardVc.isUpcomingMatch.bind(listener: { [weak self] flag in

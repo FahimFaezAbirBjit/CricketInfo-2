@@ -18,12 +18,12 @@ struct BatsmanInfo{
     var strikeRate: String
 }
 struct TeamInfo{
-    var visitorTeam: String
-    var localTeam: String
-    var vistorTeamScore: String
-    var LocalTeamScore: String
-    var extrasLocal: String
-    var extrasVis: String
+    var secInningsTeam: String
+    var firstInningsTeam: String
+    var secInningsScore: String
+    var firstInningsScore: String
+    var extrasfirst: String
+    var extrasSec: String
     var note: String
 }
 struct BowlerInfo{
@@ -44,8 +44,13 @@ extension ExpandableInnings{
         ExpandableInnings(isExpand: true, batsman: [BatsmanInfo(batsmanName: "Batsman", outStatus: "", run: "R", ball: "B", four: "4s", six: "6s", strikeRate: "SR")])
     ]
 }
-extension BowlerInfo{
-    static var firstIningsBowler = [BowlerInfo(bowlerName: "Bowler", over: "O", maidenOver: "M", bowlerRun: "R", bowlerWicket: "W", bowlerEconomy: "ER")]
-    static var secIningsBowler = [BowlerInfo(bowlerName: "Bowler", over: "O", maidenOver: "M", bowlerRun: "R", bowlerWicket: "W", bowlerEconomy: "ER")]
+struct ExpandableBowling{
+    var bowler: [BowlerInfo]
+}
+extension ExpandableBowling{
+    static var bowlingInfo = [
+        ExpandableBowling(bowler: [BowlerInfo(bowlerName: "Bowler", over: "O", maidenOver: "M", bowlerRun: "R", bowlerWicket: "W", bowlerEconomy: "ER")]),
+        ExpandableBowling(bowler: [BowlerInfo(bowlerName: "Bowler", over: "O", maidenOver: "M", bowlerRun: "R", bowlerWicket: "W", bowlerEconomy: "ER")])
+    ]
 }
 

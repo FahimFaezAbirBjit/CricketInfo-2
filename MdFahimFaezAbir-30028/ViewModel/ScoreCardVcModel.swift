@@ -8,7 +8,7 @@
 import Foundation
 class ScoreCardVcModel{
    // var scorecardInningsOne: ObservableObject<ScoreCard?> = ObservableObject(value: nil)
-    //var scorecardInningsTwo: ObservableObject<ScoreCard?> = ObservableObject(value: nil)
+    var Innings: ObservableObject<[ExpandableInnings]?> = ObservableObject(value: nil)
     var teamInfo: ObservableObject<TeamInfo?> = ObservableObject(value: nil)
     static var scorecardId: ObservableObject<Int?> = ObservableObject(value: nil)
     var isUpcomingMatch :  ObservableObject<Bool?> = ObservableObject(value: nil)
@@ -20,7 +20,9 @@ class ScoreCardVcModel{
                 guard let scorecard = scoreCardModel?.data else {return}
                 if scorecard.status != "NS"{
                     self.teamInfo.value = ViewModelHelper.shared.setTeamInfo(scorecard: scorecard)
-                    dump(self.teamInfo.value)
+                    ShowScorecardVcModel.teamInfo.value = ViewModelHelper.shared.setTeamInfo(scorecard: scorecard)
+                    ShowScorecardVcModel.inningsInfo.value = ViewModelHelper.shared.setFirstInnigsBat(scorecard: scorecard)
+                    ShowScorecardVcModel.bowlerInfo.value = ViewModelHelper.shared.setBowling(scorecard: scorecard)
                     self.isUpcomingMatch.value = false
                 }else{
                     self.isUpcomingMatch.value = true
