@@ -16,4 +16,5 @@ struct Constants{
     static let scoreCardHeader = "ScorecardHeader"
     static let firstInnings = "FirstInnings"
     static let secInnings = "SecInnings"
+    static let squadTableCell = "SquadTableCell"
 }

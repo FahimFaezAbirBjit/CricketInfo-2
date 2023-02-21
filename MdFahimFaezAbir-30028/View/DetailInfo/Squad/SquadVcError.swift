@@ -1,13 +1,13 @@
 //
-//  SquadVc.swift
+//  SquadVcError.swift
 //  MdFahimFaezAbir-30028
 //
-//  Created by Bjit on 17/2/23.
+//  Created by Bjit on 21/2/23.
 //
 
 import UIKit
 
-class SquadVc: UIViewController {
+class SquadVcError: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
