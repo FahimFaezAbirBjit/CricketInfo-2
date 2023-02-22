@@ -72,4 +72,15 @@ class TimeConvertion {
         print(date)
         return dateFormatter.string(from: date)
     }
+    func timeRemaining(from startDate: Date, to endDate: Date) -> (hours: Int, minutes: Int, seconds: Int) {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.hour, .minute, .second], from: startDate, to: endDate)
+        
+        guard let hours = components.hour,
+              let minutes = components.minute,
+              let seconds = components.second else {
+            return (0, 0, 0)
+        }
+        return (max(0, hours), max(0, minutes), max(0, seconds))
+    }
 }

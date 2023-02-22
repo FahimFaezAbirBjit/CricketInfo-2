@@ -32,6 +32,8 @@ struct DataClass: Codable {
     var bowling: [Bowling]?
     var runs: [ScoreCardRun]?
     var scoreboards: [ScoreboardElement]?
+    var manofmatch: Manofmatch?
+    var manofseries: Manofmatch?
     var tosswon, stage: ScoreCardLeague?
 
     enum CodingKeys: String, CodingKey {
@@ -65,10 +67,31 @@ struct DataClass: Codable {
 //        case rpcOvers = "rpc_overs"
 //        case rpcTarget = "rpc_target"
 //        case weatherReport = "weather_report"
-        case league, localteam, visitorteam, batting, bowling, runs, scoreboards, tosswon, stage
+        case league, localteam, visitorteam, batting, bowling, runs, scoreboards,manofmatch, manofseries, tosswon, stage
     }
 }
 
+struct Manofmatch: Codable {
+    var resource: String?
+    var id, countryID: Int?
+    var firstname, lastname, fullname: String?
+    var imagePath: String?
+    var dateofbirth: String?
+    var gender: String?
+    var battingstyle: String?
+    var bowlingstyle: String?
+    var position: Position?
+    var updatedAt: String?
+
+    enum CodingKeys: String, CodingKey {
+        case resource, id
+        case countryID = "country_id"
+        case firstname, lastname, fullname
+        case imagePath = "image_path"
+        case dateofbirth, gender, battingstyle, bowlingstyle, position
+        case updatedAt = "updated_at"
+    }
+}
 // MARK: - Batting
 struct Batting: Codable {
     var resource: String?
@@ -140,7 +163,7 @@ struct Batsman: Codable {
     var gender: String?
     var battingstyle: String?
     var bowlingstyle: String?
-    var position: Position?
+    var position: SquadPosition?
     var updatedAt: String?
 
     enum CodingKeys: String, CodingKey {

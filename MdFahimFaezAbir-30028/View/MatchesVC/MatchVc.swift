@@ -30,7 +30,7 @@ class MatchVc: UIViewController {
 //        upcomingView.alpha = 0
 //        recentView.alpha = 0
       //  networkView.isHidden = true
-        liveView.isHidden = true
+        liveView.isHidden = false
         upcomingView.isHidden = true
         recentView.isHidden = true
         segmentController.setTitleTextAttributes(selectedTextAttributes, for: .selected)

@@ -26,7 +26,7 @@ class ScoreCardVc: UIViewController {
         ScoreCardVcModel.scorecardId.bind(listener: { [weak self] fixId in
             guard let self = self,let fixId = fixId else {return}
             print(fixId)
-            let url =  "https://cricket.sportmonks.com/api/v2.0/fixtures/\(fixId)?include=localteam.country,visitorteam.country,stage,tosswon,league,runs,scoreboards,batting.batsman,bowling.bowler,batting.team,bowling.team,batting.catchstump,batting.runoutby,batting.batsmanout,batting.bowler,batting.result&api_token=tdfy0GkKqZjQ1x7cZ79dQIT6VLeygjPJaMUIErC8URWie3nG7xatObPGuRnV"
+            let url =  "https://cricket.sportmonks.com/api/v2.0/fixtures/\(fixId)?include=localteam.country,visitorteam.country,stage,tosswon,league,runs,scoreboards,batting.batsman,bowling.bowler,batting.team,bowling.team,batting.catchstump,batting.runoutby,batting.batsmanout,batting.bowler,batting.result&api_token=aGypft0iQPFUBpefG6U1QInmd9OvUDsadwYyMFJZQSGud9rb80dmNlruCfuL"
             print(url)
             self.scorecardVc.getscore(url: url)
             print("Hello")

@@ -37,7 +37,7 @@ class InfoVc: UIViewController {
     func setUpBindersForFixId(){
         InfoVcModel.infoId.bind(listener: { [weak self]id in
           guard let self = self, let fix_id = id else {return}
-          let url = "https://cricket.sportmonks.com/api/v2.0/fixtures/\(fix_id)?include=localteam.country,visitorteam.country,venue,stage,firstumpire,secondumpire,tvumpire,referee,tosswon,league&fields[fixtures]=id,starting_at,loacalteam,visitorteam,status,live,round,tosswon,elected,league&api_token=tdfy0GkKqZjQ1x7cZ79dQIT6VLeygjPJaMUIErC8URWie3nG7xatObPGuRnV"
+          let url = "https://cricket.sportmonks.com/api/v2.0/fixtures/\(fix_id)?include=localteam.country,visitorteam.country,venue,stage,firstumpire,secondumpire,tvumpire,referee,tosswon,league&fields[fixtures]=id,starting_at,loacalteam,visitorteam,status,live,round,tosswon,elected,league&api_token=aGypft0iQPFUBpefG6U1QInmd9OvUDsadwYyMFJZQSGud9rb80dmNlruCfuL"
             print(url)
             self.innfoVc.getInfo(url: url)
         })
