@@ -7,48 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9C3839E9-D987-4F1B-B994-B09FA6F01B45"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MdFahimFaezAbir-30028/View/DetailInfo/ScoreCard/ShowScorecard.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "73BE49C9-A6E5-487D-AC7A-CFBC3B37B7BC"
+            uuid = "FDE1DE6F-DACC-4653-B70C-961B120426B9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MdFahimFaezAbir-30028/View/DetailInfo/ScoreCard/ShowScorecard.swift"
+            filePath = "MdFahimFaezAbir-30028/View/DetailInfo/ScoreCard/ScoreCardVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "setUpBindersForFixId()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DE7F9C52-4714-4B4A-8CEF-60F5A862185A"
-            shouldBeEnabled = "No"
+            uuid = "6E65DD0B-439D-49E8-8B64-EB40D6E55BCA"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MdFahimFaezAbir-30028/View/DetailInfo/ScoreCard/ShowScorecard.swift"
+            filePath = "MdFahimFaezAbir-30028/View/DetailInfo/ScoreCard/ScoreCardVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "setUpBindersForFixId()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

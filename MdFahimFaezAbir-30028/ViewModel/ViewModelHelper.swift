@@ -189,5 +189,34 @@ class ViewModelHelper{
         ExpandableBowling.bowlingInfo[1].bowler = bowlerSec
         return ExpandableBowling.bowlingInfo
     }
+    func setSquad(squad: SquadData)-> [MatchSquad]?{
+        guard let lineup = squad.lineup else {return nil}
+        var localSquad = [Squad]()
+        var visitorSquad = [Squad]()
+        var name: String
+        for player in lineup{
+            if player.lineup?.teamID == squad.localteamID{
+                if player.lineup?.captain ?? false{
+                    name = (player.firstname ?? "") + "(C)"
+                    print(name)
+                }else{
+                    name = player.firstname ?? ""
+                }
+                localSquad.append(Squad(teamName: squad.localteam?.name ?? "", playerName: name, playerImage: player.imagePath ?? "", playerTeamFlag: squad.localteam?.imagePath ?? "", playerPosition: player.position?.name ?? ""))
+                
+            }else if player.lineup?.teamID == squad.visitorteamID{
+                if (player.lineup?.captain ?? false){
+                    name = (player.firstname ?? "") + "(C)"
+                }else{
+                    name = player.firstname ?? ""
+                }
+                visitorSquad.append(Squad(teamName: squad.visitorteam?.name ?? "", playerName:  name, playerImage: player.imagePath ?? "", playerTeamFlag: squad.visitorteam?.imagePath ?? "", playerPosition: player.position?.name ?? ""))
+            }
+        }
+        MatchSquad.playingXI[0].squad = localSquad
+        MatchSquad.playingXI[1].squad = visitorSquad
+        return MatchSquad.playingXI
+    }
+    
 }
 

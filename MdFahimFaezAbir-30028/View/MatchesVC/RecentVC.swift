@@ -16,7 +16,7 @@ class RecentVC: UIViewController {
         recentTableView.dataSource = self
         setUpBindersForRecentMatches()
         setUpBindersForIndexPath()
-        let url = "https://cricket.sportmonks.com/api/v2.0/fixtures/?include=localteam.country,visitorteam.country,runs,venue,stage&fields[fixtures]=id,starting_at,loacalteam,visitorteam,runs,status,live,round,note&sort=-starting_at&filter[starts_between]=2023-01-15T00:00:00.000000Z,2023-02-20T23:59:00.000000Z&api_token=tdfy0GkKqZjQ1x7cZ79dQIT6VLeygjPJaMUIErC8URWie3nG7xatObPGuRnV"
+        let url = "https://cricket.sportmonks.com/api/v2.0/fixtures/?include=localteam.country,visitorteam.country,runs,venue,stage&fields[fixtures]=id,starting_at,loacalteam,visitorteam,runs,status,live,round,note&sort=-starting_at&filter[starts_between]=2023-01-15T00:00:00.000000Z,2023-02-20T23:59:00.000000Z&api_token=aGypft0iQPFUBpefG6U1QInmd9OvUDsadwYyMFJZQSGud9rb80dmNlruCfuL"
         recentVm.getRecentMatchesMatches(url: url)
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +37,8 @@ class RecentVC: UIViewController {
                     detailVc.detailVc.setFixId(fixId: matches[row].fixId)
                     InfoVcModel.infoId.value = matches[row].fixId
                     ScoreCardVcModel.scorecardId.value = matches[row].fixId
+                    SquadVcModel.squadId.value = matches[row].fixId
+                    LiveDetailViewModel.fixId.value = matches[row].fixId
                     detailVc.title = matches[row].localTeamCode + " V " + matches[row].visitorTeamCode + ", " +  matches[row].round
                     self.navigationController?.pushViewController(detailVc, animated: true)
                 }

@@ -29,6 +29,7 @@ extension MatchViewCell: UICollectionViewDataSource{
                 item.btnLive.titleLabel?.text = "Live"
                 item.btnLive.titleLabel?.textColor = .red
                 item.btnLive.imageView?.image = UIImage(systemName: "livephoto")
+                item.matchResult.text = matchData[indexPath.row].result
             }
         }
         else if matchData[indexPath.row].matchType == .recent {
