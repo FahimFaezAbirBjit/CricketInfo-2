@@ -11,6 +11,7 @@ class LiveDetailView: UIViewController {
     @IBOutlet weak var liveUpComingView: UIView!
     @IBOutlet weak var liveRecentView: UIView!
     var liveDetailVc = LiveDetailViewModel()
+    let apiMaker = ApiMaker()
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpBindersForFixId()
@@ -25,9 +26,7 @@ class LiveDetailView: UIViewController {
         LiveDetailViewModel.fixId.bind(listener: { [weak self] fixId in
             guard let self = self,let fixId = fixId else {return}
             print(fixId)
-            let url =  "https://cricket.sportmonks.com/api/v2.0/fixtures/\(fixId)?include=localteam.country,visitorteam.country,stage,tosswon,league,runs,scoreboards,batting.batsman,bowling.bowler,batting.team,bowling.team,batting.catchstump,batting.runoutby,batting.batsmanout,batting.bowler,batting.result,manofmatch,manofseries&api_token=aGypft0iQPFUBpefG6U1QInmd9OvUDsadwYyMFJZQSGud9rb80dmNlruCfuL"
-            
-            print("Hello")
+            let url = self.apiMaker.buildLiveDetailUrl(id: fixId)
             self.liveDetailVc.getLiveDetails(url: url)
         })
     }

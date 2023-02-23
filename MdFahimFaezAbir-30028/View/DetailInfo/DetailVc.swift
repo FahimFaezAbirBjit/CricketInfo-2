@@ -30,6 +30,7 @@ class DetailVc: UIViewController {
         scoreCardView.isHidden = true
         squadView.isHidden = true
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.tintColor = UIColor.white
         segmentController.setTitleTextAttributes(selectedTextAttributes, for: .selected)
         segmentController.setTitleTextAttributes(normalTextAttributes, for: .normal)
       // setUpBindersForFixId()
@@ -51,6 +52,7 @@ class DetailVc: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.tintColor = UIColor.white
         tabBarController?.tabBar.isHidden = true
     }
     override func viewWillDisappear(_ animated: Bool) {

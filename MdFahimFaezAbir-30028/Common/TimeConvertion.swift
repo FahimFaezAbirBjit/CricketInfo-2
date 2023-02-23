@@ -83,4 +83,49 @@ class TimeConvertion {
         }
         return (max(0, hours), max(0, minutes), max(0, seconds))
     }
+    func previousDate(prev: Int)->String{
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let previousDay = calendar.date(byAdding: .day, value: prev, to: currentDate)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let previousDayFormatted = dateFormatter.string(from: previousDay!)
+        return previousDayFormatted
+    }
+    func nextDate(next: Int)->String{
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let nextMonth = calendar.date(byAdding: .day, value: next, to: currentDate)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let nextFormatted = dateFormatter.string(from: nextMonth!)
+        return nextFormatted
+    }
+    func previousMonth(prev: Int)->String{
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let previousMonth = calendar.date(byAdding: .month, value: prev, to: currentDate)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let previousMonthFormatted = dateFormatter.string(from: previousMonth!)
+        return previousMonthFormatted
+    }
+    func nextMonth(next: Int)->String{
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let nextMonth = calendar.date(byAdding: .month, value: next, to: currentDate)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let nextMonthFormatted = dateFormatter.string(from: nextMonth!)
+        return nextMonthFormatted
+    }
+    func currentDate()->String{
+        let currentDate = Date()
+        _ = Calendar.current
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let current = dateFormatter.string(from: currentDate)
+        return current
+    }
+    
 }

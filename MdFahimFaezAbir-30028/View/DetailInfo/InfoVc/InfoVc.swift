@@ -24,6 +24,7 @@ class InfoVc: UIViewController {
     @IBOutlet weak var league: UILabel!
     @IBOutlet weak var series: UILabel!
     var innfoVc = InfoVcModel()
+    var apiMaker = ApiMaker()
     override func viewDidLoad() {
         super.viewDidLoad()
         venueVc.layer.cornerRadius = 15
@@ -37,8 +38,8 @@ class InfoVc: UIViewController {
     func setUpBindersForFixId(){
         InfoVcModel.infoId.bind(listener: { [weak self]id in
           guard let self = self, let fix_id = id else {return}
-          let url = "https://cricket.sportmonks.com/api/v2.0/fixtures/\(fix_id)?include=localteam.country,visitorteam.country,venue,stage,firstumpire,secondumpire,tvumpire,referee,tosswon,league&fields[fixtures]=id,starting_at,loacalteam,visitorteam,status,live,round,tosswon,elected,league&api_token=aGypft0iQPFUBpefG6U1QInmd9OvUDsadwYyMFJZQSGud9rb80dmNlruCfuL"
-            print(url)
+
+            let url = self.apiMaker.buildInfoUrl(id: fix_id)
             self.innfoVc.getInfo(url: url)
         })
     }
