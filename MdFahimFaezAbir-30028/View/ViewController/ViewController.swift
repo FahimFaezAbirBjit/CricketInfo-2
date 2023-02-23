@@ -29,6 +29,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         uiCustomization()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
     
     
 }

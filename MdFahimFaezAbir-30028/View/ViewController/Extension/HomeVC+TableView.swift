@@ -41,6 +41,7 @@ extension HomeVC: UITableViewDataSource{
         if indexPath.section == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.matchCell, for: indexPath) as! MatchViewCell
             cell.matchData = vcModel.matches.value ?? []
+            dump(vcModel.matches.value ?? [])
             cell.collectionView.reloadData()
             return cell
         }else{

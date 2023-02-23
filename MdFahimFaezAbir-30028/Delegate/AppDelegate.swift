@@ -10,9 +10,14 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    let apiMaker = ApiMaker()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         //sleep(5)
+        let url = apiMaker.playerApiBuilder()
+        let data = CoreDataDB.shared.getAllData()
+        if data?.count == 0{
+            ApiCallerForSearchData.shared.getSearchPlayer(url: url)
+        }
        // UIApplication.shared.statusBarStyle = .lightContent
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         print(urls[urls.count-1] as URL)

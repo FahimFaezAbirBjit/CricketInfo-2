@@ -17,4 +17,9 @@ struct Constants{
     static let firstInnings = "FirstInnings"
     static let secInnings = "SecInnings"
     static let squadTableCell = "SquadTableCell"
+    static let searchPlayerTC  = "SearchPlayerTC"
+    static let searchPlayer = "searchPlayer"
+    static let playerInfo = "playerInfo"
+    static let playerInfoCell = "playerInfoCell"
+    static let playerPersonalInfoCell = "playerPersonalInfoCell"
 }

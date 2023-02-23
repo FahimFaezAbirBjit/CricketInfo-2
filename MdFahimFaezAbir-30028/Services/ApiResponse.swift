@@ -32,7 +32,7 @@ class ApiResponse {
                     let result = try JSONDecoder().decode(
                         T.self, from: data
                     )
-                    self.cache.setObject(data as NSData, forKey: url.absoluteString as NSString)
+                     self.cache.setObject(data as NSData, forKey: url.absoluteString as NSString)
                     completion(.success(result))
                     //  dump(result)
                 } catch {

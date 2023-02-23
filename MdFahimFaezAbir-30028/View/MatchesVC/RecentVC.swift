@@ -10,17 +10,22 @@ import UIKit
 class RecentVC: UIViewController {
     @IBOutlet weak var recentTableView: UITableView!
     var recentVm = RecentVcModel()
+    let apiMaker = ApiMaker()
     override func viewDidLoad() {
         super.viewDidLoad()
         recentTableView.delegate = self
         recentTableView.dataSource = self
         setUpBindersForRecentMatches()
         setUpBindersForIndexPath()
-        let url = "https://cricket.sportmonks.com/api/v2.0/fixtures/?include=localteam.country,visitorteam.country,runs,venue,stage&fields[fixtures]=id,starting_at,loacalteam,visitorteam,runs,status,live,round,note&sort=-starting_at&filter[starts_between]=2023-01-15T00:00:00.000000Z,2023-02-20T23:59:00.000000Z&api_token=aGypft0iQPFUBpefG6U1QInmd9OvUDsadwYyMFJZQSGud9rb80dmNlruCfuL"
+        let url = apiMaker.buildFixturesURL(startingFrom: TimeConvertion.shared.previousMonth(prev: -3), endingOn: TimeConvertion.shared.currentDate() , isReverse: true)
+        print(url)
         recentVm.getRecentMatchesMatches(url: url)
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
+        let url = apiMaker.buildFixturesURL(startingFrom: TimeConvertion.shared.previousMonth(prev: -3), endingOn: TimeConvertion.shared.currentDate() , isReverse: true)
+        print(url)
+        recentVm.getRecentMatchesMatches(url: url)
     }
     override func viewWillDisappear(_ animated: Bool) {
        // tabBarController?.tabBar.isHidden = true

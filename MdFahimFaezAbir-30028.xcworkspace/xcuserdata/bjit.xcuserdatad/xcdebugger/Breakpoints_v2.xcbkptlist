@@ -7,33 +7,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FDE1DE6F-DACC-4653-B70C-961B120426B9"
-            shouldBeEnabled = "Yes"
+            uuid = "CA816155-0B5C-49B0-9C74-2C94B79813C9"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MdFahimFaezAbir-30028/View/DetailInfo/ScoreCard/ScoreCardVc.swift"
+            filePath = "MdFahimFaezAbir-30028/View/SearchPlayer/SearchPlayerVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "setUpBindersForFixId()"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "setUpBinderForIndexPath()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6E65DD0B-439D-49E8-8B64-EB40D6E55BCA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MdFahimFaezAbir-30028/View/DetailInfo/ScoreCard/ScoreCardVc.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "setUpBindersForFixId()"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CA816155-0B5C-49B0-9C74-2C94B79813C9 - ecf0bbd035648ee7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.IndexPath&gt;) -&gt; () in MdFahimFaezAbir_30028.SearchPlayerVc.setUpBinderForIndexPath() -&gt; ()"
+                  moduleName = "MdFahimFaezAbir-30028"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bjit/Desktop/iOS-Dev/Day51/MdFahimFaezAbir-30028/MdFahimFaezAbir-30028/View/SearchPlayer/SearchPlayerVc.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "424">
+               </Location>
+               <Location
+                  uuid = "CA816155-0B5C-49B0-9C74-2C94B79813C9 - ecf0bbd035648ee7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.IndexPath&gt;) -&gt; () in MdFahimFaezAbir_30028.SearchPlayerVc.setUpBinderForIndexPath() -&gt; ()"
+                  moduleName = "MdFahimFaezAbir-30028"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bjit/Desktop/iOS-Dev/Day51/MdFahimFaezAbir-30028/MdFahimFaezAbir-30028/View/SearchPlayer/SearchPlayerVc.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "628">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

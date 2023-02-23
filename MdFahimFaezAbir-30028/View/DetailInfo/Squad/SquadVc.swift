@@ -9,6 +9,7 @@ import UIKit
 
 class SquadVc: UIViewController {
     var squadVc = SquadVcModel()
+    let apiMaker = ApiMaker()
     @IBOutlet weak var squadView: UIView!
     @IBOutlet weak var squadErrorview: UIView!
     override func viewDidLoad() {
@@ -21,7 +22,7 @@ class SquadVc: UIViewController {
     func setUpBindersForFixId(){
         SquadVcModel.squadId.bind(listener: { [weak self] fixId in
             guard let self = self, let fixId = fixId else {return}
-            let url = "https://cricket.sportmonks.com/api/v2.0/fixtures/\(fixId)?fields[fixtures]=id,starting_at,loacalteam,visitorteam,localteam_id,visitorteam_id,lineup,status&include=localteam.country,visitorteam.country,lineup&api_token=aGypft0iQPFUBpefG6U1QInmd9OvUDsadwYyMFJZQSGud9rb80dmNlruCfuL"
+            let url = self.apiMaker.buildSquadUrl(id: fixId)
             self.squadVc.getSquad(url: url)
         })
     }
